@@ -1,0 +1,108 @@
+body {
+    background: #f2f7ff;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.patch-header {
+    background: #0d6efd;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+.section-title {
+    border-left: 5px solid #0d6efd;
+    padding-left: 10px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.patch-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+    margin-bottom: 0.4rem;
+}
+
+.version-selector {
+    margin: 1rem auto;
+    max-width: 300px;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.dropdown-container.open {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Selected value */
+.dropdown-selected {
+    font-weight: 600;
+}
+
+/* Options list */
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 8px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: rgb(179, 179, 179);
+    border-radius: 10px;
+    overflow: hidden;
+
+    /* Closed state */
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    /* Animation */
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+/* When open */
+.dropdown-container.open .dropdown-options {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Option items */
+.dropdown-options li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-options li:last-child {
+    border-bottom: 0px none;
+    margin: 0
+}
+
+.dropdown-options li:hover {
+    background: #f0f5ff;
+}

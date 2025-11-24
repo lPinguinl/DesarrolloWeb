@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge Tactics - Patch Notes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Styles/patch_notes.css" />
+</head>
+
+<body>
+
+    <header class="patch-header">
+        <h1 class="fw-bold">Patch Notes</h1>
+        <p>Take a look at what has changed in the game!!</p>
+    </header>
+
+    <div class="container mt-4">
+
+        <div class="version-selector">
+            <div id="dropdown" class="dropdown-container">
+                <div class="dropdown-selected" id="dropdownSelected">
+                    Patch 1.3 - Unit Rework
+                </div>
+
+                <ul class="dropdown-options" id="dropdownOptions">
+                    <li data-value="1.3">Patch 1.3 - Unit Rework</li>
+                    <li data-value="1.2">Patch 1.2 - Balancing Update</li>
+                    <li data-value="1.1">Patch 1.1 - Bug Fixes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="patchContainer"></div>
+
+
+    </div>
+
+    <script>
+        const patches = {
+            "1.3": `
+                <div class='patch-card'>
+                    <h2 class='section-title'>Summary</h2>
+                    <p>This update reworks several merge units, improves late-game performance, and adds new tactical options.</p>
+
+                    <h2 class='section-title'>New Features</h2>
+                    <ul>
+                        <li>Added new <strong>Chain Lightning Mage</strong> that damages multiple enemies when merged to Tier 4.</li>
+                        <li>New emote unlocked when winning 5 Merge Tactics matches in a row.</li>
+                    </ul>
+
+                    <h2 class='section-title'>Unit Reworks</h2>
+                    <ul>
+                        <li><strong>Archer</strong>: Attack speed increased by 8% to help with early-game clearing.</li>
+                        <li><strong>Bomber</strong>: Explosion radius increased by 20% at Tier 3+.</li>
+                        <li><strong>Knight</strong>: Now gains a temporary shield when merged.</li>
+                    </ul>
+
+                    <h2 class='section-title'>UI / UX</h2>
+                    <ul>
+                        <li>Improved merge animation for better clarity.</li>
+                        <li>Added tooltips explaining Tier bonuses.</li>
+                    </ul>
+
+                    <h2 class='section-title'>Bug Fixes</h2>
+                    <ul>
+                        <li>Fixed issue where units occasionally stopped attacking after merging.</li>
+                        <li>Fixed mobile layout causing icons to overlap on smaller screens.</li>
+                    </ul>
+                </div>
+            `,
+
+            "1.2": `
+                <div class='patch-card'>
+                    <h2 class='section-title'>Summary</h2>
+                    <p>Balance-focused patch improving fairness across Tier 1–3 gameplay.</p>
+
+                    <h2 class='section-title'>Balance Changes</h2>
+                    <ul>
+                        <li><strong>Archer</strong>: Damage reduced by 5%.</li>
+                        <li><strong>Ice Wizard</strong>: Slow effect now lasts 0.2s longer.</li>
+                        <li><strong>Giant Skeleton</strong>: Bomb damage increased by 10%.</li>
+                    </ul>
+
+                    <h2 class='section-title'>Performance</h2>
+                    <ul>
+                        <li>Improved FPS stability during large swarm waves.</li>
+                    </ul>
+
+                    <h2 class='section-title'>Bug Fixes</h2>
+                    <ul>
+                        <li>Fixed rare crash when dragging units quickly.</li>
+                        <li>Fixed sound effect looping after victory.</li>
+                    </ul>
+                </div>
+            `,
+
+            "1.1": `
+                <div class='patch-card'>
+                    <h2 class='section-title'>Bug Fixes</h2>
+                    <ul>
+                        <li>Fixed players being unable to merge units at max population.</li>
+                        <li>Fixed incorrect Tier icons on certain Android devices.</li>
+                        <li>Fixed pathfinding bug causing melee units to get stuck.</li>
+                    </ul>
+
+                    <h2 class='section-title'>Performance</h2>
+                    <ul>
+                        <li>Reduced memory usage by optimizing sprites.</li>
+                    </ul>
+                </div>
+            `,
+        };
+
+        const container = document.getElementById("patchContainer");
+        const dropdown = document.getElementById("dropdown");
+        const dropdownSelected = document.getElementById("dropdownSelected");
+        const dropdownOptions = document.getElementById("dropdownOptions");
+
+        function loadPatchNotes(version = "1.3") {
+            container.innerHTML = patches[version];
+        }
+
+        dropdownSelected.addEventListener("click", () => {
+            dropdown.classList.toggle("open");
+        });
+
+        dropdownOptions.querySelectorAll("li").forEach(item => {
+            item.addEventListener("click", () => {
+                dropdownSelected.textContent = item.textContent;
+                loadPatchNotes(item.getAttribute("data-value"));
+                dropdown.classList.remove("open");
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove("open");
+            }
+        });
+
+        loadPatchNotes();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
