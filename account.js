@@ -1,26 +1,17 @@
-// Compare Panel Logic
-const openCompareBtn = document.getElementById("openCompare");
-const closeCompareBtn = document.getElementById("closeCompare");
-const comparePanel = document.getElementById("comparePanel");
-
-openCompareBtn.addEventListener("click", () => {
-    comparePanel.classList.add("show");
+// Back button simulation
+document.querySelector(".back-btn").addEventListener("click", () => {
+    window.history.back();
 });
 
-closeCompareBtn.addEventListener("click", () => {
-    comparePanel.classList.remove("show");
-});
-
-// Optional: haptic-like tap feedback for mobile pressable elements
-const pressables = document.querySelectorAll(".pressable");
-
-pressables.forEach(el => {
-    el.addEventListener("touchstart", () => {
-        el.style.transform = "scale(0.96)";
-    });
-
-    el.addEventListener("touchend", () => {
-        el.style.transform = "scale(1)";
-        setTimeout(() => el.style.transform = "", 150);
+// Simple entry animation
+window.addEventListener("load", () => {
+    document.querySelectorAll(".stat-card").forEach((card, i) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            card.style.transition = "0.4s";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, i * 120);
     });
 });
