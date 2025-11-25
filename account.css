@@ -1,10 +1,9 @@
-/* COLOR VARIABLES */
 :root {
-    --royal-blue: #0A4D9C;      /* Header */
-    --dark-blue: #062A52;       /* Footer */
-    --gold: #D4AF37;            /* Highlights, borders */
-    --stone-gray: #E0E0E0;      /* Cards */
-    --royal-red: #C1272D;       /* Alerts */
+    --royal-blue: #0A4D9C;
+    --dark-blue: #062A52;
+    --gold: #D4AF37;
+    --stone-gray: #E0E0E0;
+    --royal-red: #C1272D;
     --white: #FFFFFF;
 }
 
@@ -22,11 +21,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-title {
-    font-size: 1.4rem;
-    font-weight: 600;
 }
 
 .back-btn {
@@ -56,42 +50,54 @@ body {
     color: var(--royal-blue);
 }
 
-/* HISTORY CARD */
+/* HISTORY */
 .history-card {
-    width: 160px;
-    height: 40px;
+    width: 180px;
+    height: 45px;
     background: var(--white);
-    border-radius: 6px;
     border: 2px solid var(--gold);
+    border-radius: 6px;
+    padding: 0.6rem;
+    font-weight: 600;
 }
 
-/* STATS */
+.show-more-btn {
+    background: var(--royal-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.history-list .history-card {
+    margin-top: 0.5rem;
+}
+
+/* STAT CARDS */
 .stat-card {
     background: var(--white);
     margin-top: 1rem;
     height: 100px;
     border: 2px solid var(--gold);
     border-radius: 8px;
-    position: relative;
-    transition: transform 0.15s ease, box-shadow 0.15s;
+    padding: 0.8rem;
+    cursor: pointer;
 }
 
 .stat-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: #f7f7f7;
 }
 
-.stat-icon {
-    width: 44px;
-    height: 20px;
-    background: var(--stone-gray);
-    border-radius: 4px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.stat-details {
+    background: var(--white);
+    border-left: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    padding: 0.8rem;
 }
 
-/* FOOTER NAVIGATION */
+/* FOOTER */
 .footer-nav {
     background: var(--dark-blue);
     color: var(--white);
@@ -104,22 +110,20 @@ body {
 }
 
 .footer-label {
-    font-size: 0.9rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .footer-item {
     font-size: 0.8rem;
     margin: 0;
-    opacity: 0.85;
 }
 
 .dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     background: var(--white);
-    margin-top: 4px;
-    display: inline-block;
+    border-radius: 50%;
     margin-left: 4px;
+    display: inline-block;
 }
