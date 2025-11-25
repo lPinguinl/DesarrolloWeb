@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <button class="back-btn">&larr;</button>
+        <h1 class="header-title">Account</h1>
+        <div class="header-icon"></div>
+    </header>
+
+    <main class="container mb-5 pb-5 fade-in">
+
+        <div class="profile-section text-center mt-4">
+            <div class="avatar"></div>
+            <button class="compare-btn" id="openCompare">Compare</button>
+        </div>
+
+        <h2 class="text-center mt-3 account-name">Card Name</h2>
+
+        <!-- ACCOUNT SECTIONS -->
+        <div class="account-card pressable">Stats</div>
+        <div class="account-card pressable">Use</div>
+        <div class="account-card pressable">Winrate</div>
+        <div class="account-card pressable">Teams Used In</div>
+
+    </main>
+
+    <!-- SLIDE-UP PANEL -->
+    <div id="comparePanel" class="compare-panel">
+        <div class="panel-content">
+            <h3>Compare Mode</h3>
+            <p>Select another card to compare stats.</p>
+            <button class="close-panel" id="closeCompare">Close</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-nav">
+        <div class="footer-icon"></div>
+        <div class="footer-icon"></div>
+        <div class="footer-icon"></div>
+        <div class="footer-icon"></div>
+    </footer>
+
+    <script src="account.js"></script>
+
+</body>
+</html>

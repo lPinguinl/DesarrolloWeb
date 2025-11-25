@@ -1,0 +1,125 @@
+/* Colors */
+:root {
+    --royal-blue: #0A3D91;
+    --dark-blue: #06275C;
+    --gold: #D4AF37;
+    --stone-gray: #E1E1E1;
+    --royale-red: #B5002A;
+    --white: #FFFFFF;
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--stone-gray);
+    color: #000;
+}
+
+/* Header */
+.header {
+    background: var(--royal-blue);
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Cards */
+.contact-card,
+.info-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease;
+}
+
+h2 {
+    color: var(--dark-blue);
+    border-left: 4px solid var(--gold);
+    padding-left: 10px;
+}
+
+/* Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--dark-blue);
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid var(--royal-blue);
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+    box-shadow: 0 0 6px var(--gold);
+}
+
+/* Error texts */
+.error {
+    color: var(--royale-red);
+    font-size: 14px;
+    height: 14px;
+    margin-top: 4px;
+}
+
+/* Button */
+.send-btn {
+    background: var(--gold);
+    color: #000;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.send-btn:hover {
+    background: var(--royale-red);
+    color: var(--white);
+    transform: scale(1.04);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
