@@ -32,11 +32,6 @@
         <p class="text-light">All modifiers available in Merge Tactics.</p>
     </div>
 
-    <!-- SEARCH -->
-    <div class="container mt-3">
-        <input type="text" class="searchbar form-control" placeholder="Search modifiers...">
-    </div>
-
     <!-- FILTER DROPDOWN -->
     <div class="container mt-3">
         <div class="version-selector">
@@ -64,7 +59,8 @@
             <!-- Modifier -->
             <div class="col-4 col-lg-2 filter-item" data-category="offense">
                 <a href="#" class="unit-card-link">
-                    <div class="modifier-item">
+                    <div class="modifier-item" data-name="Boost Attack" data-effect="Increases attack power."
+                        data-league="Gold" data-image="Assets/Icons/modifier.webp">
                         <img src="Assets/Icons/modifier.webp" alt="modifier">
                         <p>Boost Attack</p>
                     </div>
@@ -73,7 +69,8 @@
 
             <div class="col-4 col-lg-2 filter-item" data-category="utility">
                 <a href="#" class="unit-card-link">
-                    <div class="modifier-item">
+                    <div class="modifier-item" data-name="Range Up" data-effect="Increases unit range."
+                        data-league="Silver" data-image="Assets/Icons/modifier.webp">
                         <img src="Assets/Icons/modifier.webp" alt="modifier">
                         <p>Range Up</p>
                     </div>
@@ -106,6 +103,7 @@
     </footer>
 
     <script src="Scripts/filters.js"></script>
+    <script src="Scripts/modals.js"></script>
 
 </body>
 

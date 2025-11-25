@@ -351,6 +351,84 @@ body {
     color: #0A2A66;
 }
 
+/* Modal for modifier details */
+.modifier-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .18s ease, visibility .18s ease;
+}
+
+.modifier-modal-overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modifier-modal {
+    background: #fff;
+    color: #0A2A66;
+    border-radius: 12px;
+    padding: 18px;
+    width: min(520px, 92%);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.modifier-modal img {
+    width: 96px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.modifier-modal .modal-content {
+    flex: 1;
+}
+
+.modifier-modal .modal-fields p {
+    margin: 4px 0;
+    color: #222;
+    font-size: 15px;
+}
+
+.modifier-modal .modal-fields strong {
+    color: #0A2A66;
+}
+
+.modifier-modal .modal-title {
+    font-family: 'Bangers', cursive;
+    font-size: 22px;
+    margin: 0 0 6px 0;
+    color: #0A2A66;
+}
+
+.modifier-modal .modal-effect {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.modifier-modal .modal-league {
+    font-weight: 700;
+    color: #555;
+}
+
+.modifier-modal .modal-close {
+    background: #FFD700;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
 /* ================= ADAPTABILITY ================= */
 
 @media (max-width: 576px) {
