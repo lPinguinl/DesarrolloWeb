@@ -1,27 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
-<!-- asi se hacen los comentarios(es una garcha) -->
+<html lang="en">
+
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
-    comunmente meta se encuentra con name="" content="
-    name="viewport" content=""
-    meta charset="UTF-8">
-    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TacticsAPI - Main Page</title>
 
-    <title>Title</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Styles/index.css">
 </head>
 
 <body>
-    <h1>
-        Mi primera pagina.
-    </h1>
+
+    <!-- HEADER -->
+    <header class="main-header d-flex align-items-center justify-content-between px-3">
+        <h1 class="logo-text">CRMerge+</h1>
+        <div class="profile-icon"></div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner mt-4">
+        <div class="hero-overlay">
+            <div class="container text-center">
+                <h1 class="hero-title">Welcome to CRMerge+</h1>
+                <p class="hero-subtitle">Your ultimate companion for the Merge Tactics meta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section mt-4">
+        <div class="container text-center">
+            <h2 class="cta-title">Stay Ahead of the Meta</h2>
+            <p class="cta-text">Track performance, read patch notes, and optimize your <i>Merge Tactics</i> strategies.
+            </p>
+            <a href="account.html" class="cta-btn">Start Now</a>
+        </div>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <div class="container mt-3">
+        <input type="text" placeholder="Search cards..." class="searchbar form-control">
+    </div>
+
+    <!-- SEMAPHORE DASHBOARD -->
+    <div class="container mt-4">
+
+        <!-- GREEN TIER -->
+        <div class="tier-card tier-green">
+            <h2 class="tier-title">Top Performing Cards</h2>
+
+            <div class="row g-2 mt-2">
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/electro-dragon.webp" class="card-img-top" alt="Archer">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/balloon.webp" class="card-img-top" alt="Knight">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/wizard.webp" class="card-img-top" alt="Wizard">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- YELLOW TIER -->
+        <div class="tier-card tier-yellow">
+            <h2 class="tier-title">Average Performing Cards</h2>
+
+            <div class="row g-2 mt-2">
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/bomber.webp" class="card-img-top" alt="Bomber">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/tesla.webp" class="card-img-top" alt="Tesla">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/minions.webp" class="card-img-top" alt="Minions">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- RED TIER -->
+        <div class="tier-card tier-red">
+            <h2 class="tier-title">Low Performing Cards</h2>
+
+            <div class="row g-2 mt-2">
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/bats.webp" class="card-img-top" alt="Barbarian">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/x-bow.webp" class="card-img-top" alt="Battle Ram">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="cr-card card">
+                        <img src="Assets/Cards/cannon.webp" class="card-img-top" alt="Cannon">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FEATURED SECTION -->
+    <section class="featured-section mt-5">
+        <div class="container">
+            <h2 class="section-heading">Featured</h2>
+
+            <div class="row g-3 mt-2">
+
+                <div class="col-12 col-md-6">
+                    <a href="modifiers.html" class="featured-link">
+                        <div class="featured-card">
+                            <img src="Assets/Icons/modifier.webp" alt="Modifiers">
+                            <h3 class="featured-title">Modifiers</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <a href="troops.html" class="featured-link">
+                        <div class="featured-card">
+                            <img src="Assets/Icons/strategy.png" alt="Troops">
+                            <h3 class="featured-title">Troops</h3>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section class="catalog-section mt-5">
+        <div class="container">
+            <h2 class="section-heading">Catalogs</h2>
+
+            <div class="row g-3 mt-2">
+
+                <div class="col-12 col-md-6">
+                    <a href="modifiers.html" class="catalog-link">
+                        <div class="catalog-item">
+                            <img src="Assets/Icons/modifier.webp" alt="Modifiers">
+                            <p>Modifiers</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <a href="troops.html" class="catalog-link">
+                        <div class="catalog-item">
+                            <img src="Assets/Icons/strategy.png" alt="Troops">
+                            <p>Troops</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <a href="patch_notes.html" class="catalog-link">
+                        <div class="catalog-item">
+                            <img src="Assets/Icons/information.png" alt="Patch notes">
+                            <p>Latest Updates</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <a href="contact.html" class="catalog-link">
+                        <div class="catalog-item">
+                            <img src="Assets/Icons/contact.png" alt="Contact">
+                            <p>Contact</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-5">
+        <div class="container d-flex justify-content-between">
+
+            <div class="footer-section">
+                <h4 class="footer-title">CRMerge+</h4>
+                <p>Home</p>
+                <p>Meta</p>
+                <p>Analysis</p>
+                <p>Patch Notes</p>
+            </div>
+
+            <div class="footer-section text-end">
+                <h4 class="footer-title">Social</h4>
+                <div class="social-icons">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 
 </html>
-
-
