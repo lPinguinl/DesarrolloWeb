@@ -1,0 +1,47 @@
+/* PAGE TITLES */
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.page-subtitle {
+    color: #666;
+    margin-top: 4px;
+}
+
+/* CARD GRID ITEMS */
+.unit-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.unit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.unit-card img {
+    width: 100%;
+    height: auto;
+}
+
+.unit-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* FILTERS */
+.form-select {
+    border-radius: 10px;
+}
+
+/* MOBILE STACK FIX */
+@media (max-width: 576px) {
+    .filter-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -16,7 +16,6 @@ body {
     font-family: 'Bangers', cursive;
     font-size: 28px;
     color: #FFD700;
-    /* Gold */
 }
 
 .profile-icon {
@@ -49,6 +48,7 @@ body {
 .tier-title {
     font-family: 'Bangers', cursive;
     margin-bottom: 5px;
+    color: #FFD700;
 }
 
 /* Specific card colors */
@@ -57,7 +57,7 @@ body {
 }
 
 .tier-yellow {
-    background: #f7d66b;
+    background: #b1963d;
 }
 
 .tier-red {
@@ -84,7 +84,6 @@ body {
 /* FOOTER */
 .footer {
     background: #061b45;
-    /* Even darker blue */
     padding: 25px 0;
     color: #cccccc;
 }
@@ -293,6 +292,13 @@ body {
 }
 
 .unit-card {
+    position: relative;
+    width: 100%;
+    max-width: 175px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #FFD700;
+    background: #222;
     transition: transform 0.15s ease;
     cursor: pointer;
 }
@@ -301,26 +307,69 @@ body {
     transform: translateY(-4px);
 }
 
-.unit-name {
-    font-weight: 600;
+.unit-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
+.unit-name {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: #FFD700;
+    font-family: 'Bangers', cursive;
+    padding: 3px 6px;
+
+    border-radius: 6px;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+
+.modifier-item {
+    background: #CCCCCC;
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #FFD700;
+}
+
+.modifier-item img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 6px;
+}
+
+.modifier-item p {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #0A2A66;
+}
+
+/* ================= ADAPTABILITY ================= */
+
 @media (max-width: 576px) {
+    .featured-card img {
+        display: none;
+    }
+
+    .unit-card {
+        max-width: 100px;
+    }
+
     .unit-card img {
         width: 100%;
         height: auto;
     }
-}
 
-
-
-
-/* ================= ADAPTABILITY ================= */
-
-/* Hide image on small screens */
-@media (max-width: 576px) {
-    .featured-card img {
-        display: none;
+    .unit-name {
+        font-size: 13px;
+        padding: 2px 4px;
     }
 
     .catalog-item img {
@@ -360,6 +409,7 @@ body {
     .catalog-item img {
         width: 50px;
     }
+
 }
 
 /* Extra large desktop */
@@ -373,6 +423,10 @@ body {
     }
 
     .catalog-item img {
+        width: 70px;
+    }
+
+    .modifier-item img {
         width: 70px;
     }
 }
