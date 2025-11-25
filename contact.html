@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CRMerge+</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Contact Us</h1>
+        <p>We’re here to help you with anything you need.</p>
+    </header>
+
+    <main class="container">
+        <section class="contact-card">
+            <h2>Send a Message</h2>
+
+            <form id="contactForm" novalidate>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="example@mail.com">
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Write your message..."></textarea>
+                    <small class="error"></small>
+                </div>
+
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section class="info-card">
+            <h2>Support Information</h2>
+            <p><strong>Email:</strong> support@CRMerge.com</p>
+            <p><strong>Phone:</strong> +54 11 65137606</p>
+            <p><strong>Hours:</strong> Mon–Fri / 8AM–8PM</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 CRMerge+. All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
