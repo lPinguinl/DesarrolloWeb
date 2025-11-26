@@ -93,6 +93,7 @@ color: var(--blue-dark);
 /* Uso: Fondo secundario / Footer -> AZUL OSCURO (#0A2466) */
 footer {
 background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
+font-family: 'Bangers', cursive; /* Títulos: Bangers */
 }
 
 /* Estilo para los enlaces del footer */

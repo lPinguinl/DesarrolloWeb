@@ -1,125 +1,201 @@
-/* Colors */
+/* Colors (Corregidos según Visual Guide) */
 :root {
-    --royal-blue: #0A3D91;
-    --dark-blue: #06275C;
-    --gold: #D4AF37;
-    --stone-gray: #E1E1E1;
-    --royale-red: #B5002A;
-    --white: #FFFFFF;
+--blue-real: #0047AB; /* Azul Real: Fondo principal */
+--blue-dark: #0A2466; /* Azul Oscuro: Header / Footer */
+--gold: #FFD700; /* Dorado: Botones, títulos, bordes */
+--stone-grey: #CCCCCC; /* Gris Piedra: Fondos de tarjetas */
+--royal-red: #E63946; /* Rojo Royale: Alerta/Errores/Hover */
+--white: #FFFFFF;
 }
 
 /* Global */
+html {
+height: 100%;
+}
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--stone-gray);
-    color: #000;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: var(--blue-real); 
+color: var(--white); 
+
+/* Sticky Footer Setup: Define el cuerpo como un contenedor flexible vertical */
+display: flex;
+flex-direction: column; 
+min-height: 100vh; 
+}
+/* Main content must grow to push the footer down */
+main {
+flex-grow: 1; 
+}
+
+/* Tipografía */
+h1, h2, .title-font {
+font-family: 'Bangers', cursive; /* Títulos: Bangers */
+letter-spacing: 1.5px;
+text-shadow: 2px 2px #00000080; 
 }
 
 /* Header */
 .header {
-    background: var(--royal-blue);
-    color: var(--white);
-    padding: 40px;
-    text-align: center;
-    border-bottom: 4px solid var(--gold);
+background: var(--blue-dark); /* Fondo: Azul Oscuro */
+color: var(--white);
+padding: 10px 0; /* Padding vertical ajustado para Navbar */
+border-bottom: 4px solid var(--gold); /* Borde: Dorado */
+}
+
+.account-icon {
+
+    width: 100px; 
+    height: 100px;
+    
+
 }
 
 /* Layout */
 .container {
-    max-width: 1100px;
-    margin: 40px auto;
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 20px;
+/* FIX: Esta línea hace que el contenedor crezca y empuje el footer al final */
+flex-grow: 1; 
+}
+
+/* CLASE PARA LA ESTRUCTURA DE GRID DE LAS TARJETAS */
+main.contact-layout { 
     display: grid;
     grid-template-columns: 1fr 0.8fr;
     gap: 30px;
-    padding: 0 20px;
 }
 
 /* Cards */
 .contact-card,
 .info-card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid var(--gold);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    animation: fadeIn 0.6s ease;
+background: var(--stone-grey); /* Fondo: Gris Piedra */
+padding: 25px;
+border-radius: 12px;
+border: 2px solid var(--gold); /* Borde: Dorado */
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+animation: fadeIn 0.6s ease;
+color: var(--blue-dark); /* Color de texto oscuro para fondo claro */
 }
 
 h2 {
-    color: var(--dark-blue);
-    border-left: 4px solid var(--gold);
-    padding-left: 10px;
+color: var(--gold); /* Título h2 en Azul Oscuro */
+border-left: 4px solid var(--gold);
+padding-left: 10px;
 }
 
 /* Inputs */
 .input-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 18px;
+display: flex;
+flex-direction: column;
+margin-bottom: 18px;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: var(--dark-blue);
+font-weight: bold;
+margin-bottom: 6px;
+color: var(--blue-dark); /* Labels en Azul Oscuro */
 }
 
 input,
 textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 2px solid var(--royal-blue);
-    font-size: 16px;
-    transition: 0.2s;
+padding: 12px;
+border-radius: 8px;
+border: 2px solid var(--blue-dark); /* Borde de input en Azul Oscuro */
+font-size: 16px;
+transition: 0.2s;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--gold);
-    outline: none;
-    box-shadow: 0 0 6px var(--gold);
+border-color: var(--gold);
+outline: none;
+box-shadow: 0 0 6px var(--gold);
 }
 
 /* Error texts */
 .error {
-    color: var(--royale-red);
-    font-size: 14px;
-    height: 14px;
-    margin-top: 4px;
+color: var(--royal-red); /* Texto de error: Rojo Royale */
+font-size: 14px;
+height: 14px;
+margin-top: 4px;
 }
 
 /* Button */
 .send-btn {
-    background: var(--gold);
-    color: #000;
-    padding: 14px;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.25s;
+background: var(--gold); /* Botón: Dorado */
+color: var(--blue-dark); /* Texto: Azul Oscuro */
+padding: 14px;
+width: 100%;
+border: none;
+border-radius: 10px;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.25s;
 }
 
 .send-btn:hover {
-    background: var(--royale-red);
-    color: var(--white);
-    transform: scale(1.04);
+background: var(--royal-red); /* Hover: Rojo Royale */
+color: var(--white); /* Texto: Blanco */
+transform: scale(1.04);
 }
 
-/* Footer */
-.footer {
-    background: var(--dark-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+/* FOOTER */
+footer {
+background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
+}
+/* Estilo para los enlaces del footer */
+.footer-link {
+color: white; /* Color de los enlaces */
+font-family: 'Bangers', cursive; /* Títulos: Bangers */
+text-decoration: none; /* Quita el subrayado */
+transition: color 0.3s;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.footer-link:hover {
+color: var(--gold); /* Color de hover: Dorado (#FFD700) */
+}
+
+/* Estilo para los iconos sociales */
+.social-icons a {
+color: var(--gold); /* Color de los iconos sociales: Dorado (#FFD700) */
+transition: color 0.3s;
+}
+
+.social-icons a:hover {
+color: var(--white); /* Blanco al pasar el ratón */
+}
+
+/* Regla para la línea divisoria (simulando un gris claro) */
+hr.border-secondary {
+border-color: #6c757d !important; /* Mantenemos el gris de Bootstrap para la línea */
+}
+
+/* Para el texto de copyright */
+.text-secondary {
+color: #6c757d !important; /* Mantenemos el gris de Bootstrap para el texto secundario */
+}
+
+/* MOBILE FIRST ADJUSTMENTS */
+@media (max-width: 768px) {
+.display-3 {
+font-size: 2.5rem;
+}
+.footer-link {
+font-size: 0.8rem;
+}
+
+/* Ajuste importante para móviles: hacer que las tarjetas se apilen */
+main.contact-layout { 
+grid-template-columns: 1fr;
+}
+
+/* Ajuste del título h1 en header para móviles */
+.header h1 {
+    font-size: 1.8rem;
+}
+
+
 }
