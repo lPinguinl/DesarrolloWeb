@@ -1,28 +1,52 @@
 /* GLOBAL STYLES */
 body {
-    background: #0A2A66;
-    /* Dark Royal Blue */
+    background: #0047AB;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
 
-/* HEADER */
-.main-header {
-    background: #0A2A66;
-    padding: 15px 0;
+h1, h2, .title-font {
+font-family: 'Bangers', cursive;
+letter-spacing: 1.5px;
+text-shadow: 2px 2px #00000080; 
 }
 
-.logo-text {
-    font-family: 'Bangers', cursive;
-    font-size: 28px;
-    color: #FFD700;
+/* Header */
+.header {
+background: #0A2A66;
+color: white;
+padding: 10px 0;
+border-bottom: 4px solid #FFD700;
 }
 
-.profile-icon {
-    width: 40px;
-    height: 40px;
-    background: #bbb;
-    border-radius: 50%;
+.account-icon {
+    width: 8vw;
+    max-width: 100px;
+    min-width: 40px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+background-color: #0A2A66;
+}
+
+.footer-link {
+color: white;
+font-family: 'Bangers', cursive;
+text-decoration: none; 
+transition: color 0.3s;
+}
+
+.footer-link:hover {
+color: #FFD700;
+}
+.container {
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 20px;
+flex-grow: 1; 
 }
 
 /* SEARCH BAR */
@@ -156,7 +180,6 @@ body {
 .cta-section {
     text-align: center;
     padding: 30px 15px;
-    background: #0A2A66;
     border-radius: 12px;
 }
 
