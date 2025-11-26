@@ -87,126 +87,264 @@
         </section>
 
         <!-- RECENT STATS SECTION (Accordion with Card details) -->
-        <section>
-            <h2 class="text-warning title-font mb-3">RECENT STATS</h2>
-            
-            <div class="accordion" id="statsAccordion">
-                
-                <!-- #stat1: VICTORY -->
-                <div class="accordion-item clash-card mb-3 overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat1">
-                            <span class="status-win fs-4">VICTORY</span> 
-                            <span class="ms-3 small text-muted">vs KingBlue</span>
-                        </button>
-                    </h2>
-                    <div id="stat1" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
-                        <div class="accordion-body">
-                            <div class="row text-center">
-                                <div class="col-6 border-end border-dark">
-                                    <h5 class="title-font text-primary">YOUR DECK</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="title-font text-danger">ENEMY</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- #stat2: DEFEAT -->
-                <div class="accordion-item clash-card mb-3 overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat2">
-                            <span class="status-loss fs-4">DEFEAT</span>
-                            <span class="ms-3 small text-muted">vs Destroyer</span>
-                        </button>
-                    </h2>
-                    <div id="stat2" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
-                        <div class="accordion-body">
-                            <div class="row text-center">
-                                <div class="col-6 border-end border-dark">
-                                    <h5 class="title-font text-primary">YOUR DECK</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="title-font text-danger">ENEMY</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+ <section>
+    <h2 class="text-warning title-font mb-3">RECENT STATS</h2>
+    
+    <div class="accordion" id="statsAccordion">
+        
+        <div class="accordion-item clash-card mb-3 overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat1">
+                    <span class="status-win fs-4">TOP 1</span> 
+                    <span class="ms-3 small text-muted">Battle #5025</span>
+                </button>
+            </h2>
+            <div id="stat1" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                <div class="accordion-body p-2">
+                    
+                    <h5 class="title-font text-warning mb-3">BATTLE DETAILS (4 PLAYERS)</h5>
 
-                <!-- #stat3: NEW DEFEAT -->
-                <div class="accordion-item clash-card mb-3 overflow-hidden">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat3">
-                            <span class="status-loss fs-4">DEFEAT</span>
-                            <span class="ms-3 small text-muted">vs TheGreatest</span>
-                        </button>
-                    </h2>
-                    <div id="stat3" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
-                        <div class="accordion-body">
-                            <div class="row text-center">
-                                <div class="col-6 border-end border-dark">
-                                    <h5 class="title-font text-primary">YOUR DECK</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="title-font text-danger">ENEMY</h5>
-                                    <div class="row g-1">
-                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
-                                        <div class="col-4"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary"><i class="bi bi-trophy-fill me-2"></i> #1 You </h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
                         </div>
                     </div>
+                    
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#2 KingBlue</h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 mb-3 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#3 Player_X</h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#4 TheGreatest</h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-        </section>
+        </div>
+        
+        <div class="accordion-item clash-card mb-3 overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat2">
+                    <span class="status-loss fs-4">TOP 3</span>
+                    <span class="ms-3 small text-muted">Battle #5024</span>
+                </button>
+            </h2>
+            <div id="stat2" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                <div class="accordion-body p-2">
+                    
+                    <h5 class="title-font text-warning mb-3">BATTLE DETAILS (4 PLAYERS)</h5>
+
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#1 Destroyer</h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#2 XXx CashMoney Xxx</h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="clash-card p-2 mb-3 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary"><i class="bi bi-person-fill me-2"></i> #3 You</h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#4 LostPlayer</h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item clash-card mb-3 overflow-hidden">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat3">
+                    <span class="status-loss fs-4">TOP 4</span>
+                    <span class="ms-3 small text-muted">Battle #5023</span>
+                </button>
+            </h2>
+            <div id="stat3" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                <div class="accordion-body p-2">
+                    
+                    <h5 class="title-font text-warning mb-3">BATTLE DETAILS (4 PLAYERS)</h5>
+
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#1 The One</h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 mb-3 status-win-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#2 Julien</h6>
+                            <span class="badge bg-success">WINNER</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="clash-card p-2 mb-3 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary">#3 OtherGuy</h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+
+                    <div class="clash-card p-2 status-loss-bg">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="mb-0 fw-bold text-primary"><i class="bi bi-person-fill me-2"></i> #4 You /h6>
+                            <span class="badge bg-danger">DEFEAT</span>
+                        </div>
+                        <div class="row g-1">
+                            <div class="col-3"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                            <div class="col-3"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <!-- FOOTER: Corrected for Visual Guide and Edge Alignment -->
