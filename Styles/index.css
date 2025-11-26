@@ -81,36 +81,6 @@ body {
     background: linear-gradient(90deg, #FFD700, #ffb300);
 }
 
-/* FOOTER */
-.footer {
-    background: #061b45;
-    padding: 25px 0;
-    color: #cccccc;
-}
-
-.footer-title {
-    font-family: 'Bangers';
-    font-size: 20px;
-    color: #FFD700;
-}
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.circle {
-    width: 16px;
-    height: 16px;
-    background: #FFD700;
-    border-radius: 50%;
-    transition: 0.2s;
-}
-
-.circle:hover {
-    background: #FF0000;
-}
-
 /* Clash Royale style cards */
 .cr-card {
     border: none;
