@@ -1,129 +1,136 @@
+/* COLOR VARIABLES - FROM VISUAL GUIDE PDF */
 :root {
-    --royal-blue: #0A4D9C;
-    --dark-blue: #062A52;
-    --gold: #D4AF37;
-    --stone-gray: #E0E0E0;
-    --royal-red: #C1272D;
-    --white: #FFFFFF;
+--blue-real: #0047AB;/* Royal Blue: Main Background */
+--blue-dark: #0A2466;/* Dark Blue: Header / Footer */
+--gold: #FFD700;  /* Gold: Borders, highlight titles, buttons */
+--stone-grey: #CCCCCC; /* Stone Grey: Section/Card Backgrounds */
+--royal-red: #E63946;/* Royal Red: Alerts / Defeat */
+--white: #FFFFFF; 
 }
 
-/* GLOBAL */
+/* 1. STICKY FOOTER IMPLEMENTATION */
+html {
+height: 100%;
+}
 body {
-    background: var(--stone-gray);
-    font-family: Arial, sans-serif;
+background-color: var(--blue-real); /* Main Background Royal Blue */
+color: var(--white);
+font-family: 'Poppins', sans-serif; /* Secondary Text */
+
+/* Sticky Footer Setup */
+display: flex;
+flex-direction: column; 
+min-height: 100vh; /* Ensures it takes up 100% of the viewport height */
+}
+
+/* Main content must grow to push the footer down */
+main {
+flex-grow: 1; 
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, .title-font {
+font-family: 'Bangers', cursive; /* Large Titles */
+letter-spacing: 1.5px;
+text-shadow: 2px 2px #00000080; /* Soft shadow for emphasis */
 }
 
 /* HEADER */
-.header {
-    background: var(--royal-blue);
-    color: var(--white);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+background-color: var(--blue-dark); /* Dark Blue Background */
+border-bottom: 3px solid var(--gold); /* Gold Border */
 }
 
-.back-btn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.4rem;
+/* CARDS */
+.clash-card {
+background-color: var(--stone-grey); /* Stone Grey #CCCCCC Background */
+border: 2px solid var(--gold); /* Gold Border */
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+color: var(--blue-dark); /* Dark text for contrast on light background */
 }
 
-.header-icon {
-    width: 26px;
-    height: 26px;
-    background: var(--gold);
-    border-radius: 50%;
+/* SECONDARY BUTTON (History View More/Less) */
+.btn-clash-secondary {
+background-color: transparent;
+border: none;
+color: var(--blue-dark);
+font-weight: bold;
+transition: all 0.3s ease;
 }
 
-/* TITLES */
-.account-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--royal-blue);
+.btn-clash-secondary:hover {
+color: var(--royal-red); /* Royal Red Hover */
 }
 
-.section-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--royal-blue);
+
+/* MATCH STATUS */
+.status-win {
+color: green; /* Mantener verde para victoria */
+font-weight: bold;
+}
+.status-loss {
+color: var(--royal-red); /* Royal Red for Defeat */
+font-weight: bold;
 }
 
-/* HISTORY */
-.history-card {
-    width: 180px;
-    height: 45px;
-    background: var(--white);
-    border: 2px solid var(--gold);
-    border-radius: 6px;
-    padding: 0.6rem;
-    font-weight: 600;
+/* ACCORDION (STATS) */
+.accordion-button {
+background-color: transparent !important;
+color: var(--blue-dark);
+font-family: 'Bangers', cursive;
+box-shadow: none !important;
 }
 
-.show-more-btn {
-    background: var(--royal-blue);
-    color: var(--white);
-    border: none;
-    padding: 0.3rem 0.7rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
+.accordion-button:not(.collapsed) {
+background-color: rgba(255, 215, 0, 0.2) !important; /* Soft gold background when open */
 }
-
-.history-list .history-card {
-    margin-top: 0.5rem;
-}
-
-/* STAT CARDS */
-.stat-card {
-    background: var(--white);
-    margin-top: 1rem;
-    height: 100px;
-    border: 2px solid var(--gold);
-    border-radius: 8px;
-    padding: 0.8rem;
-    cursor: pointer;
-}
-
-.stat-card:hover {
-    background: #f7f7f7;
-}
-
-.stat-details {
-    background: var(--white);
-    border-left: 2px solid var(--gold);
-    border-right: 2px solid var(--gold);
-    border-bottom: 2px solid var(--gold);
-    padding: 0.8rem;
+.accordion-body {
+color: var(--blue-dark); 
 }
 
 /* FOOTER */
-.footer-nav {
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+/* Uso: Fondo secundario / Footer -> AZUL OSCURO (#0A2466) */
+footer {
+background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
 }
 
-.footer-label {
-    font-weight: 700;
-    margin: 0;
+/* Estilo para los enlaces del footer */
+.footer-link {
+color: white; /* Color de los enlaces */
+text-decoration: none; /* Quita el subrayado */
+transition: color 0.3s;
 }
 
-.footer-item {
-    font-size: 0.8rem;
-    margin: 0;
+.footer-link:hover {
+color: var(--gold); /* Color de hover: Dorado (#FFD700) */
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    background: var(--white);
-    border-radius: 50%;
-    margin-left: 4px;
-    display: inline-block;
+/* Estilo para los iconos sociales */
+.social-icons a {
+color: var(--gold); /* Color de los iconos sociales: Dorado (#FFD700) */
+transition: color 0.3s;
+}
+
+.social-icons a:hover {
+        color: var(--white); /* Blanco al pasar el ratón */
+}
+
+/* Regla para la línea divisoria */
+hr.border-secondary {
+border-color: #6c757d !important; /* Mantenemos el gris de Bootstrap para la línea */
+}
+
+/* Para el texto de copyright */
+.text-secondary {
+ color: #6c757d !important; /* Mantenemos el gris de Bootstrap para el texto secundario */
+}
+/* MOBILE FIRST ADJUSTMENTS */
+@media (max-width: 768px) {
+.display-3 {
+font-size: 2.5rem;
+}
+.footer-link {
+font-size: 0.8rem;
+}
 }
