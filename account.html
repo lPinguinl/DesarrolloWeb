@@ -1,66 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Account</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile - CRMerge+</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="account.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <button class="back-btn">&larr;</button>
-        <h1 class="header-title">Account</h1>
-        <div class="header-icon"></div>
+    <header class="navbar sticky-top py-3">
+        <div class="container-fluid d-flex justify-content-start align-items-center px-4 px-lg-5">
+            <a href="index.html" class="navbar-brand mb-0 h1 text-warning title-font fs-1 text-decoration-none">CRMerge+</a>
+        </div>
     </header>
 
-    <main class="container mt-4 mb-5 pb-5">
+    <main class="container py-4">
+        
+        <section class="mb-4 text-white">
+            
+            <div class="text-center">
+                
+                <!-- Profile Picture (Avatar) -->
+                <img 
+                    src="assets/Icons/account.png" 
+                    alt="Player Profile Icon" 
+                    class="img-fluid rounded-circle mb-3 p-1 border border-warning"
+                    style="width: 150px; height: 150px; object-fit: cover;"
+                >
 
-        <!-- ACCOUNT NAME -->
-        <h2 class="account-title">Account Name</h2>
+                <!-- Player Name -->
+                <h1 class="display-3">PLAYER </h1>
+                <p class="lead">Diamond League</p>
+            </div>
+        </section>
 
-        <!-- HISTORY SECTION -->
-        <h3 class="section-title">History</h3>
+        <!-- BATTLE HISTORY SECTION -->
+        <section class="mb-5">
+            <h2 class="text-warning title-font mb-3">BATTLE HISTORY</h2>
+            
+            <div class="clash-card p-3">
+                
+                <div class="row align-items-center mb-2 text-center">
+                    <div class="col-4 text-start fw-bold">10 MIN AGO</div> 
+                    <div class="col-4">VS. RIVAL_01</div>
+                    <div class="col-4 text-end status-win">VICTORY</div> 
+                </div>
 
-        <!-- LAST MATCH -->
-        <div id="last-match" class="history-card"></div>
+                <div id="history-expanded" class="collapse border-top border-dark mt-2 pt-2">
+                    
+                    <div class="row mb-2 text-center">
+                        <div class="col-4 text-start">1 Hr Ago</div>
+                        <div class="col-4">vs. Pepe</div>
+                        <div class="col-4 text-end status-loss">DEFEAT</div>
+                    </div>
+                    
+                    <div class="row mb-2 text-center">
+                        <div class="col-4 text-start">2 Hrs Ago</div>
+                        <div class="col-4">vs. Juan</div>
+                        <div class="col-4 text-end status-win">VICTORY</div>
+                    </div>
+                    
+                    <div class="row mb-2 text-center">
+                        <div class="col-4 text-start">Yesterday</div>
+                        <div class="col-4">vs. Ana</div>
+                        <div class="col-4 text-end status-win">VICTORY</div>
+                    </div>
+                    
+                    <div class="row mb-2 text-center">
+                        <div class="col-4 text-start">Yesterday</div>
+                        <div class="col-4">vs. Luis</div>
+                        <div class="col-4 text-end status-loss">DEFEAT</div>
+                    </div>
+                    
+                </div>
 
-        <button id="showMoreBtn" class="show-more-btn mt-2">Show last 5 matches</button>
+                <button class="btn w-100 mt-2 btn-clash-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#history-expanded">
+                    View more <i class="bi bi-chevron-down"></i>
+                </button>
+                
+            </div>
+        </section>
 
-        <!-- 5 MATCHES (HIDDEN INITIALLY) -->
-        <div id="history-list" class="history-list d-none"></div>
+        <!-- RECENT STATS SECTION (Accordion with Card details) -->
+        <section>
+            <h2 class="text-warning title-font mb-3">RECENT STATS</h2>
+            
+            <div class="accordion" id="statsAccordion">
+                
+                <!-- #stat1: VICTORY -->
+                <div class="accordion-item clash-card mb-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat1">
+                            <span class="status-win fs-4">VICTORY</span> 
+                            <span class="ms-3 small text-muted">vs KingBlue</span>
+                        </button>
+                    </h2>
+                    <div id="stat1" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                        <div class="accordion-body">
+                            <div class="row text-center">
+                                <div class="col-6 border-end border-dark">
+                                    <h5 class="title-font text-primary">YOUR DECK</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="title-font text-danger">ENEMY</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- #stat2: DEFEAT -->
+                <div class="accordion-item clash-card mb-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat2">
+                            <span class="status-loss fs-4">DEFEAT</span>
+                            <span class="ms-3 small text-muted">vs Destroyer</span>
+                        </button>
+                    </h2>
+                    <div id="stat2" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                        <div class="accordion-body">
+                            <div class="row text-center">
+                                <div class="col-6 border-end border-dark">
+                                    <h5 class="title-font text-primary">YOUR DECK</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="title-font text-danger">ENEMY</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/bandit.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-        <!-- STATS SECTION -->
-        <h3 class="section-title mt-4">Stats</h3>
-
-        <div id="stats-container"></div>
-
+                <!-- #stat3: NEW DEFEAT -->
+                <div class="accordion-item clash-card mb-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stat3">
+                            <span class="status-loss fs-4">DEFEAT</span>
+                            <span class="ms-3 small text-muted">vs TheGreatest</span>
+                        </button>
+                    </h2>
+                    <div id="stat3" class="accordion-collapse collapse" data-bs-parent="#statsAccordion">
+                        <div class="accordion-body">
+                            <div class="row text-center">
+                                <div class="col-6 border-end border-dark">
+                                    <h5 class="title-font text-primary">YOUR DECK</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/mega-knight.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/executioner.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/barbarian.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/archer-queen.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/goblins.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/knight.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="title-font text-danger">ENEMY</h5>
+                                    <div class="row g-1">
+                                        <div class="col-4"><img src="assets/Cards/prince.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/princess.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/skeleton-king.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/valkyrie.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/bomber.jpg" class="img-fluid rounded border border-dark"></div>
+                                        <div class="col-4"><img src="assets/Cards/archer.jpg" class="img-fluid rounded border border-dark"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer-nav">
-        <div class="footer-left">
-            <p class="footer-label">TacticsAPI</p>
-            <p class="footer-item">Home</p>
-            <p="footer-item">Cards</p>
-            <p="footer-item">Patch Notes</p>
-        </div>
-
-        <div class="footer-right">
-            <p class="footer-label">Social</p>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+    <!-- FOOTER: Corrected for Visual Guide and Edge Alignment -->
+    <footer class="py-4">
+        <!-- Uso de container-fluid para ir de borde a borde y padding responsivo -->
+        <div class="container-fluid text-white px-4 px-lg-5">
+            
+            <div class="row align-items-start"> 
+                
+                <div class="col-6 col-md-6 text-start">
+                    <!-- Título principal usa Bangers -->
+                    <p class="fs-4 text-warning title-font mb-2">CRMerge+</p> 
+                    
+                    <ul class="list-unstyled mb-0 small">
+                        <!-- Enlaces usan Poppins -->
+                        <li class="mb-1"><a href="index.html" class="footer-link d-block text-white text-decoration-none">Home</a></li>
+                        <li class="mb-1"><a href="troops.html" class="footer-link d-block text-white text-decoration-none">Cards</a></li>
+                        <li class="mb-1"><a href="patch_notes.html" class="footer-link d-block text-white text-decoration-none">Patch Notes</a></li>
+                        <li class="mb-1"><a href="contact.html" class="footer-link d-block text-white text-decoration-none">Help</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-6 col-md-6 text-end">
+                    <!-- Título Social usa Bangers -->
+                    <p class="fs-4 text-warning title-font mb-2">Social</p>
+                    
+                    <div class="d-flex justify-content-end social-icons">
+                        <!-- Los íconos se pintan con CSS -->
+                        <a href="#" class="text-warning mx-1 fs-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-warning mx-1 fs-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-warning mx-1 fs-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-warning mx-1 fs-3"><i class="bi bi-youtube"></i></a> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <hr class="border-top border-secondary my-4"> 
+                </div>
+                <div class="col-12 text-center">
+                    <!-- Copyright usa Poppins (Texto secundario) -->
+                    <small class="text-secondary">© 2025 CRMerge+</small> 
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="account.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
