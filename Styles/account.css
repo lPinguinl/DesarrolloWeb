@@ -1,159 +1,154 @@
 /* COLOR VARIABLES - FROM VISUAL GUIDE PDF */
 :root {
---blue-real: #0047AB;/* Royal Blue: Main Background */
---blue-dark: #0A2466;/* Dark Blue: Header / Footer */
---gold: #FFD700; /* Gold: Borders, highlight titles, buttons */
---stone-grey: #CCCCCC; /* Stone Grey: Section/Card Backgrounds */
---royal-red: #E63946;/* Royal Red: Alerts / Defeat */
---white: #FFFFFF; 
+    --blue-real: #0047AB;
+    /* Royal Blue: Main Background */
+    --blue-dark: #0A2466;
+    /* Dark Blue: Header / Footer */
+    --gold: #FFD700;
+    /* Gold: Borders, highlight titles, buttons */
+    --stone-grey: #CCCCCC;
+    /* Stone Grey: Section/Card Backgrounds */
+    --royal-red: #E63946;
+    /* Royal Red: Alerts / Defeat */
+    --white: #FFFFFF;
 }
 
 /* NUEVO ESTILO: Fondo Oscuro para la tarjeta principal de perfil */
 .summary-dark-card {
-background: var(--blue-dark); /* Fondo: Azul Oscuro */
-border-radius: 12px;
-border: 2px solid var(--gold); /* Borde: Dorado */
-box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background: var(--blue-dark);
+    /* Fondo: Azul Oscuro */
+    border-radius: 12px;
+    border: 2px solid var(--gold);
+    /* Borde: Dorado */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* El h3 (Battle Summary) dentro de esta tarjeta debería ser Dorado para resaltar */
 .summary-dark-card h3 {
-color: var(--gold) !important; 
+    color: var(--gold) !important;
 }
 
 /* Ajustes adicionales para texto dentro de la tarjeta oscura */
 .summary-dark-card .text-white {
-color: var(--white) !important;
+    color: var(--white) !important;
 }
 
 /* Las estadísticas de Wins y Losses mantienen sus colores originales, que ya son de buen contraste: */
-.status-win { /* Wins */
-color: #4CAF50 !important; /* O el verde que estés usando */
+.status-win {
+    /* Wins */
+    color: #4CAF50 !important;
+    /* O el verde que estés usando */
 }
-.status-loss { /* Losses */
-color: var(--royal-red) !important; /* Rojo Royale */
+
+.status-loss {
+    /* Losses */
+    color: var(--royal-red) !important;
+    /* Rojo Royale */
 }
 
 /* 1. STICKY FOOTER IMPLEMENTATION */
 html {
-height: 100%;
+    height: 100%;
 }
-body {
-background-color: var(--blue-real); /* Main Background Royal Blue */
-color: var(--white);
-font-family: 'Poppins', sans-serif; /* Secondary Text */
 
-/* Sticky Footer Setup */
-display: flex;
-flex-direction: column; 
-min-height: 100vh; /* Ensures it takes up 100% of the viewport height */
+body {
+    background-color: var(--blue-real);
+    /* Main Background Royal Blue */
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    /* Secondary Text */
+
+    /* Sticky Footer Setup */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures it takes up 100% of the viewport height */
 }
 
 /* Main content must grow to push the footer down */
 main {
-flex-grow: 1; 
+    flex-grow: 1;
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, .title-font {
-font-family: 'Bangers', cursive; /* Large Titles */
-letter-spacing: 1.5px;
-text-shadow: 2px 2px #00000080; /* Soft shadow for emphasis */
-}
-
-/* HEADER */
-header {
-background-color: var(--blue-dark); /* Dark Blue Background */
-border-bottom: 3px solid var(--gold); /* Gold Border */
+h1,
+h2,
+h3,
+.title-font {
+    font-family: 'Bangers', cursive;
+    /* Large Titles */
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px #00000080;
+    /* Soft shadow for emphasis */
 }
 
 /* CARDS */
 .clash-card {
-background-color: var(--stone-grey); /* Stone Grey #CCCCCC Background */
-border: 2px solid var(--gold); /* Gold Border */
-border-radius: 12px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-color: var(--blue-dark); /* Dark text for contrast on light background */
+    background-color: var(--stone-grey);
+    /* Stone Grey #CCCCCC Background */
+    border: 2px solid var(--gold);
+    /* Gold Border */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--blue-dark);
+    /* Dark text for contrast on light background */
 }
 
 /* SECONDARY BUTTON (History View More/Less) */
 .btn-clash-secondary {
-background-color: transparent;
-border: none;
-color: var(--blue-dark);
-font-weight: bold;
-transition: all 0.3s ease;
+    background-color: transparent;
+    border: none;
+    color: var(--blue-dark);
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .btn-clash-secondary:hover {
-color: var(--royal-red); /* Royal Red Hover */
+    color: var(--royal-red);
+    /* Royal Red Hover */
 }
 
 
 /* MATCH STATUS */
 .status-win {
-color: green; /* Mantener verde para victoria */
-font-weight: bold;
+    color: green;
+    /* Mantener verde para victoria */
+    font-weight: bold;
 }
+
 .status-loss {
-color: var(--royal-red); /* Royal Red for Defeat */
-font-weight: bold;
+    color: var(--royal-red);
+    /* Royal Red for Defeat */
+    font-weight: bold;
 }
 
 /* ACCORDION (STATS) */
 .accordion-button {
-background-color: transparent !important;
-color: var(--blue-dark);
-font-family: 'Bangers', cursive;
-box-shadow: none !important;
+    background-color: transparent !important;
+    color: var(--blue-dark);
+    font-family: 'Bangers', cursive;
+    box-shadow: none !important;
 }
 
 .accordion-button:not(.collapsed) {
-background-color: rgba(255, 215, 0, 0.2) !important; /* Soft gold background when open */
+    background-color: rgba(255, 215, 0, 0.2) !important;
+    /* Soft gold background when open */
 }
+
 .accordion-body {
-color: var(--blue-dark); 
-}
-
-
-
-/* FOOTER */
-/* Uso: Fondo secundario / Footer -> AZUL OSCURO (#0A2466) */
-footer {
-background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
-font-family: 'Bangers', cursive; /* Títulos: Bangers */
-}
-
-/* Estilo para los enlaces del footer */
-.footer-link {
-color: white; /* Color de los enlaces */
-font-family: 'Bangers', cursive;
-text-decoration: none; /* Quita el subrayado */
-transition: color 0.3s;
-}
-
-.footer-link:hover {
-color: var(--gold); /* Color de hover: Dorado (#FFD700) */
-}
-
-/* Estilo para los iconos sociales */
-.social-icons a {
-color: var(--gold); /* Color de los iconos sociales: Dorado (#FFD700) */
-transition: color 0.3s;
-}
-
-.social-icons a:hover {
-color: var(--white); /* Blanco al pasar el ratón */
+    color: var(--blue-dark);
 }
 
 /* Regla para la línea divisoria */
 hr.border-secondary {
-border-color: #6c757d !important; /* Mantenemos el gris de Bootstrap para la línea */
+    border-color: #6c757d !important;
+    /* Mantenemos el gris de Bootstrap para la línea */
 }
 
 /* Para el texto de copyright */
 .text-secondary {
-color: #6c757d !important; /* Mantenemos el gris de Bootstrap para el texto secundario */
+    color: #6c757d !important;
+    /* Mantenemos el gris de Bootstrap para el texto secundario */
 }
 
 
@@ -161,17 +156,20 @@ color: #6c757d !important; /* Mantenemos el gris de Bootstrap para el texto secu
 
 /* Fondo para ganadores (Posición 1 y 2) */
 .status-win-bg {
-background-color: rgba(0, 128, 0, 0.1) !important; /* Verde muy claro (Victoria) */
+    background-color: rgba(0, 128, 0, 0.1) !important;
+    /* Verde muy claro (Victoria) */
 }
 
 /* Fondo para perdedores (Posición 3 y 4) */
 .status-loss-bg {
-background-color: rgba(230, 57, 70, 0.1) !important; /* Rojo muy claro (Derrota) */
+    background-color: rgba(230, 57, 70, 0.1) !important;
+    /* Rojo muy claro (Derrota) */
 }
 
 /* Clase para el nombre del jugador actual (Usada en el h6 dentro del acordeón) */
 .text-primary {
-color: var(--blue-dark) !important; /* Usamos el azul oscuro para resaltar */
+    color: var(--blue-dark) !important;
+    /* Usamos el azul oscuro para resaltar */
 }
 
 
@@ -179,16 +177,18 @@ color: var(--blue-dark) !important; /* Usamos el azul oscuro para resaltar */
 
 /* Regla principal: Define un tamaño fijo y manejable para las cartas en el historial */
 .accordion-body .row.g-1 img {
-/* Las columnas col-3 dan un ancho de ~25%, lo ajustaremos a un tamaño fijo */
-width: 65px !important; /* Ancho deseado para las cartas */
-height: 85px !important; /* Altura deseada para las cartas (formato retrato) */
+    /* Las columnas col-3 dan un ancho de ~25%, lo ajustaremos a un tamaño fijo */
+    width: 65px !important;
+    /* Ancho deseado para las cartas */
+    height: 85px !important;
+    /* Altura deseada para las cartas (formato retrato) */
 
-/* Aseguramos que se ajusten y no se estiren */
-object-fit: cover;
+    /* Aseguramos que se ajusten y no se estiren */
+    object-fit: cover;
 
-/* Centramos las imágenes dentro de su contenedor col-3 */
-display: block;
-margin: 0 auto;
+    /* Centramos las imágenes dentro de su contenedor col-3 */
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -196,51 +196,59 @@ margin: 0 auto;
 
 /* Contenedor de las imágenes en la sección "BEST PERFORMING CARDS" */
 .list-group {
- /* Fondo transparente para que el color del .clash-card se mantenga */
- background-color: transparent; 
+    /* Fondo transparente para que el color del .clash-card se mantenga */
+    background-color: transparent;
 }
 
 /* Estilo para las imágenes pequeñas de las cartas */
 .card-winrate-thumb {
-width: 60px; /* Tamaño fijo para la imagen */
-height: 60px;
-object-fit: cover;
-border-radius: 8px; /* Bordes ligeramente redondeados */
-border: 2px solid var(--gold); /* Borde dorado */
+    width: 60px;
+    /* Tamaño fijo para la imagen */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Bordes ligeramente redondeados */
+    border: 2px solid var(--gold);
+    /* Borde dorado */
 }
 
 /* Ajuste de tipografía para el texto de la carta */
-.list-group > div > div > .fw-bold {
-font-size: 1.1rem; /* Un poco más grande para el nombre */
+.list-group>div>div>.fw-bold {
+    font-size: 1.1rem;
+    /* Un poco más grande para el nombre */
 }
 
 /* Separación entre los elementos para que no se vean muy juntos */
 .border-bottom.border-secondary {
-border-color: #999 !important; /* Un gris más claro para la línea divisoria */
+    border-color: #999 !important;
+    /* Un gris más claro para la línea divisoria */
 }
 
 
 /* MOBILE FIRST ADJUSTMENTS */
 @media (max-width: 768px) {
-/* Reglas generales que ya tenías: */
-.display-3 {
-    font-size: 2.5rem;
- }
- .footer-link {
-    font-size: 0.8rem;
-}
 
-/* Ajustes específicos para las cartas del historial en móvil */
-.accordion-body .row.g-1 img {
- width: 50px !important; /* Más pequeñas en móvil */
- height: 65px !important;
-}
+    /* Reglas generales que ya tenías: */
+    .display-3 {
+        font-size: 2.5rem;
+    }
 
- /* Ajustes específicos para las cartas de BEST PERFORMING CARDS en móvil */
- .card-winrate-thumb {
- width: 50px; 
- height: 50px;
- }
+    .footer-link {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes específicos para las cartas del historial en móvil */
+    .accordion-body .row.g-1 img {
+        width: 50px !important;
+        /* Más pequeñas en móvil */
+        height: 65px !important;
+    }
+
+    /* Ajustes específicos para las cartas de BEST PERFORMING CARDS en móvil */
+    .card-winrate-thumb {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* ---------------------------------------------------- */
@@ -251,31 +259,39 @@ border-color: #999 !important; /* Un gris más claro para la línea divisoria */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translate3d(0, 20px, 0); /* Mover 20px hacia abajo */
+        transform: translate3d(0, 20px, 0);
+        /* Mover 20px hacia abajo */
     }
+
     to {
         opacity: 1;
-        transform: translate3d(0, 0, 0); /* Posición final (sin movimiento) */
+        transform: translate3d(0, 0, 0);
+        /* Posición final (sin movimiento) */
     }
 }
 
 /* 2. Clase base para aplicar la animación */
 .animate__fadeInUp {
     /* Oculta los elementos al cargar la página si aún no están animados */
-    opacity: 0; 
+    opacity: 0;
     animation-name: fadeInUp;
-    animation-duration: 0.8s; /* Duración de la animación */
-    animation-fill-mode: both; /* Mantiene el estado final de la animación */
-    animation-timing-function: ease-out; /* Velocidad: empieza rápido, termina lento */
+    animation-duration: 0.8s;
+    /* Duración de la animación */
+    animation-fill-mode: both;
+    /* Mantiene el estado final de la animación */
+    animation-timing-function: ease-out;
+    /* Velocidad: empieza rápido, termina lento */
 }
 
 /* 3. Clases de Retraso para un efecto escalonado (Staggered Entry) */
-.delay-300ms { 
-    animation-delay: 0.3s; 
+.delay-300ms {
+    animation-delay: 0.3s;
 }
-.delay-600ms { 
-    animation-delay: 0.6s; 
+
+.delay-600ms {
+    animation-delay: 0.6s;
 }
-.delay-900ms { 
-    animation-delay: 0.9s; 
+
+.delay-900ms {
+    animation-delay: 0.9s;
 }

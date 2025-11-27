@@ -1,0 +1,42 @@
+/* HEADER */
+header {
+    background: #0A2A66;
+    color: white;
+    padding: 10px 0;
+    border-bottom: 4px solid #FFD700;
+}
+
+.account-icon {
+    width: 8vw;
+    max-width: 100px;
+    min-width: 40px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0A2A66;
+}
+
+.footer-link {
+    color: white;
+    font-family: 'Bangers', cursive;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    transform-origin: left center;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF6B6B !important;
+}
