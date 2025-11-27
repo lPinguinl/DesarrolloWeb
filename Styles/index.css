@@ -12,7 +12,8 @@ body {
     min-height: 100vh;
 }
 
-.container {
+/* Add space before footer */
+.container.last-content {
     margin-bottom: 3rem;
 }
 
@@ -315,6 +316,13 @@ h2,
     box-sizing: border-box;
     text-align: center;
     overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+.modifier-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .modifier-item img {
