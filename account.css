@@ -34,11 +34,6 @@
     color: var(--royal-red) !important; /* Rojo Royale */
 }
 
-/* (Opcional) Si quieres que la imagen de perfil también tenga el borde en blanco o dorado */
-.summary-dark-card img {
-    border: 2px solid var(--white) !important; 
-}
-
 /* 1. STICKY FOOTER IMPLEMENTATION */
 html {
 height: 100%;
@@ -119,6 +114,8 @@ background-color: rgba(255, 215, 0, 0.2) !important; /* Soft gold background whe
 .accordion-body {
 color: var(--blue-dark); 
 }
+
+
 
 /* FOOTER */
 /* Uso: Fondo secundario / Footer -> AZUL OSCURO (#0A2466) */
