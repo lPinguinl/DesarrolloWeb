@@ -2,11 +2,11 @@
 :root {
     --blue-real: #0047AB;
     /* Royal Blue: Main Background */
-    --blue-dark: #0A2466;
+    --blue-dark: #0A2466be;
     /* Dark Blue: Header / Footer */
     --gold: #FFD700;
     /* Gold: Borders, highlight titles, buttons */
-    --stone-grey: #CCCCCC;
+    --stone-grey: #CCCCCCbe;
     /* Stone Grey: Section/Card Backgrounds */
     --royal-red: #E63946;
     /* Royal Red: Alerts / Defeat */

@@ -58,15 +58,15 @@ h2,
 
 /* Specific card colors */
 .tier-green {
-    background: #58d165;
+    background: #58d165be;
 }
 
 .tier-yellow {
-    background: #b1963d;
+    background: #b1963dbe;
 }
 
 .tier-red {
-    background: #ff6a6a;
+    background: #ff6a6abe;
 }
 
 /* MENU BUTTONS */
@@ -196,7 +196,7 @@ h2,
 }
 
 .featured-card {
-    background: #CCCCCC;
+    background: #CCCCCCbe;
     border: 3px solid #FFD700;
     border-radius: 12px;
     padding: 10px;
@@ -222,7 +222,7 @@ h2,
 }
 
 .catalog-item {
-    background: #CCCCCC;
+    background: #CCCCCCbe;
     border-radius: 12px;
     text-align: center;
     padding: 10px;
@@ -374,7 +374,7 @@ h2,
 }
 
 .modifier-modal {
-    background: #fff;
+    background: #CCCCCC;
     color: #0A2A66;
     border-radius: 12px;
     padding: 18px;
@@ -383,6 +383,9 @@ h2,
     display: flex;
     gap: 14px;
     align-items: flex-start;
+
+    /* Yellow border to match site accent */
+    border: 4px solid #FFD700;
 }
 
 .modifier-modal img {
@@ -411,6 +414,7 @@ h2,
     font-size: 22px;
     margin: 0 0 6px 0;
     color: #0A2A66;
+    text-shadow: none;
 }
 
 .modifier-modal .modal-effect {
