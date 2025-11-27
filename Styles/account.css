@@ -233,10 +233,6 @@ hr.border-secondary {
         font-size: 2.5rem;
     }
 
-    .footer-link {
-        font-size: 0.8rem;
-    }
-
     /* Ajustes específicos para las cartas del historial en móvil */
     .accordion-body .row.g-1 img {
         width: 50px !important;

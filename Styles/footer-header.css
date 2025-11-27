@@ -41,3 +41,9 @@ footer {
 .social-icons a:hover {
     color: #FF6B6B !important;
 }
+
+@media (max-width: 768px) {
+    .footer-link {
+        font-size: 1.2rem;
+    }
+}

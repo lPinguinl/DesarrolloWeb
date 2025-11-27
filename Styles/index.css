@@ -468,6 +468,11 @@ h2,
     .footer-link {
         font-size: 0.8rem;
     }
+
+    /* Center cards on mobile */
+    .container .row {
+        justify-content: center;
+    }
 }
 
 /* Medium screens */
@@ -522,4 +527,5 @@ h2,
     .modifier-item img {
         width: 70px;
     }
+    
 }

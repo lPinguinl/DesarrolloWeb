@@ -164,10 +164,6 @@ hr.border-secondary {
         font-size: 2.5rem;
     }
 
-    .footer-link {
-        font-size: 0.8rem;
-    }
-
     /* Ajuste importante para móviles: hacer que las tarjetas se apilen */
     main.contact-layout {
         grid-template-columns: 1fr;
