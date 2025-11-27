@@ -43,12 +43,11 @@ padding: 10px 0; /* Padding vertical ajustado para Navbar */
 border-bottom: 4px solid var(--gold); /* Borde: Dorado */
 }
 
+/* AJUSTE PARA RESPONSIVIDAD DEL ICONO DE CUENTA */
 .account-icon {
-
-    width: 100px; 
-    height: 100px;
-    
-
+    /* Define un tamaño máximo para escritorio */
+ max-width: 100px; 
+ height: auto; /* Mantiene la proporción de la imagen */
 }
 
 /* Layout */
@@ -62,9 +61,9 @@ flex-grow: 1;
 
 /* CLASE PARA LA ESTRUCTURA DE GRID DE LAS TARJETAS */
 main.contact-layout { 
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 30px;
+ display: grid;
+ grid-template-columns: 1fr 0.8fr;
+ gap: 30px;
 }
 
 /* Cards */
@@ -75,7 +74,7 @@ padding: 25px;
 border-radius: 12px;
 border: 2px solid var(--gold); /* Borde: Dorado */
 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-animation: fadeIn 0.6s ease;
+/* Eliminado: animation: fadeIn 0.6s ease; */
 color: var(--blue-dark); /* Color de texto oscuro para fondo claro */
 }
 
@@ -192,10 +191,52 @@ main.contact-layout {
 grid-template-columns: 1fr;
 }
 
+/* AJUSTE RESPONSIVE DEL ICONO DE CUENTA */
+.account-icon {
+    /* Reduce el tamaño del icono en móviles */
+    max-width: 60px; 
+}
+
 /* Ajuste del título h1 en header para móviles */
 .header h1 {
-    font-size: 1.8rem;
+ font-size: 1.8rem;
+}
 }
 
 
+/* ---------------------------------------------------- */
+/* --- NUEVOS ESTILOS DE ANIMACIÓN DE ENTRADA (FADE IN UP) --- */
+/* ---------------------------------------------------- */
+
+/* 1. Definición de la animación: Se mueve desde 20px abajo y cambia de opacidad 0 a 1 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0); /* Mover 20px hacia abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0); /* Posición final (sin movimiento) */
+    }
+}
+
+/* 2. Clase base para aplicar la animación */
+.animate__fadeInUp {
+    /* Oculta los elementos al cargar la página si aún no están animados */
+    opacity: 0; 
+    animation-name: fadeInUp;
+    animation-duration: 0.8s; /* Duración de la animación */
+    animation-fill-mode: both; /* Mantiene el estado final de la animación */
+    animation-timing-function: ease-out; /* Velocidad: empieza rápido, termina lento */
+}
+
+/* 3. Clases de Retraso para un efecto escalonado (Staggered Entry) */
+.delay-300ms { 
+    animation-delay: 0.3s; 
+}
+.delay-600ms { 
+    animation-delay: 0.6s; 
+}
+.delay-900ms { 
+    animation-delay: 0.9s; 
 }
