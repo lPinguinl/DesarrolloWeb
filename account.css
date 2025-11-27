@@ -98,6 +98,7 @@ background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
 /* Estilo para los enlaces del footer */
 .footer-link {
 color: white; /* Color de los enlaces */
+font-family: 'Bangers', cursive;
 text-decoration: none; /* Quita el subrayado */
 transition: color 0.3s;
 }
@@ -131,39 +132,84 @@ color: #6c757d !important; /* Mantenemos el gris de Bootstrap para el texto secu
 
 /* Fondo para ganadores (Posición 1 y 2) */
 .status-win-bg {
-    background-color: rgba(0, 128, 0, 0.1) !important; /* Verde muy claro (Victoria) */
+background-color: rgba(0, 128, 0, 0.1) !important; /* Verde muy claro (Victoria) */
 }
 
 /* Fondo para perdedores (Posición 3 y 4) */
 .status-loss-bg {
-    background-color: rgba(230, 57, 70, 0.1) !important; /* Rojo muy claro (Derrota) */
+background-color: rgba(230, 57, 70, 0.1) !important; /* Rojo muy claro (Derrota) */
 }
 
 /* Clase para el nombre del jugador actual (Usada en el h6 dentro del acordeón) */
 .text-primary {
-    color: var(--blue-dark) !important; /* Usamos el azul oscuro para resaltar */
+color: var(--blue-dark) !important; /* Usamos el azul oscuro para resaltar */
 }
 
 
-/* --- AJUSTE DE TAMAÑO DE CARTAS DENTRO DE STATS --- */
+/* --- AJUSTE DE TAMAÑO DE CARTAS DENTRO DE STATS (CORREGIDO) --- */
+
+/* Regla principal: Define un tamaño fijo y manejable para las cartas en el historial */
 .accordion-body .row.g-1 img {
-    width: 100px; 
-    height: 100px;
+    /* Las columnas col-3 dan un ancho de ~25%, lo ajustaremos a un tamaño fijo */
+    width: 65px !important; /* Ancho deseado para las cartas */
+    height: 85px !important; /* Altura deseada para las cartas (formato retrato) */
+    
+    /* Aseguramos que se ajusten y no se estiren */
     object-fit: cover;
+    
+    /* Centramos las imágenes dentro de su contenedor col-3 */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* --- NUEVOS ESTILOS PARA BEST PERFORMING CARDS (Alineación a la izquierda) --- */
+
+/* Contenedor de las imágenes en la sección "BEST PERFORMING CARDS" */
+.list-group {
+    /* Fondo transparente para que el color del .clash-card se mantenga */
+    background-color: transparent; 
+}
+
+/* Estilo para las imágenes pequeñas de las cartas */
+.card-winrate-thumb {
+    width: 60px; /* Tamaño fijo para la imagen */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    border: 2px solid var(--gold); /* Borde dorado */
+}
+
+/* Ajuste de tipografía para el texto de la carta */
+.list-group > div > div > .fw-bold {
+    font-size: 1.1rem; /* Un poco más grande para el nombre */
+}
+
+/* Separación entre los elementos para que no se vean muy juntos */
+.border-bottom.border-secondary {
+    border-color: #999 !important; /* Un gris más claro para la línea divisoria */
 }
 
 
 /* MOBILE FIRST ADJUSTMENTS */
 @media (max-width: 768px) {
-.display-3 {
-font-size: 2.5rem;
-}
-.footer-link {
-font-size: 0.8rem;
-}
-/* Aplicamos la reducción de tamaño en pantallas más pequeñas */
-.accordion-body .row.g-1 img {
-    width: 45px;
-    height: 55px;
-}
+    /* Reglas generales que ya tenías: */
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .footer-link {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes específicos para las cartas del historial en móvil */
+    .accordion-body .row.g-1 img {
+        width: 50px !important; /* Más pequeñas en móvil */
+        height: 65px !important;
+    }
+
+    /* Ajustes específicos para las cartas de BEST PERFORMING CARDS en móvil */
+    .card-winrate-thumb {
+        width: 50px; 
+        height: 50px;
+    }
 }

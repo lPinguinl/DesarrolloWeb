@@ -1,18 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    const historyExpanded = document.getElementById('history-expanded');
+    const buttonIcon = document.getElementById('buttonIcon');
+    const buttonText = document.getElementById('buttonText');
 
-    // Logic to change the History button text (View more / View less)
-    const historyCollapse = document.getElementById('history-expanded');
-    const historyBtn = document.querySelector('button[data-bs-target="#history-expanded"]');
-
-    if(historyCollapse && historyBtn) {
-        historyCollapse.addEventListener('show.bs.collapse', () => {
-            historyBtn.innerHTML = 'View less <i class="bi bi-chevron-up"></i>';
+    if (historyExpanded && buttonIcon && buttonText) {
+        
+        // Escucha el evento cuando el colapso comienza a mostrarse (show.bs.collapse)
+        historyExpanded.addEventListener('show.bs.collapse', function () {
+            buttonIcon.classList.remove('bi-chevron-down');
+            buttonIcon.classList.add('bi-chevron-up');
+            buttonText.textContent = 'View less';
         });
 
-        historyCollapse.addEventListener('hide.bs.collapse', () => {
-            historyBtn.innerHTML = 'View more <i class="bi bi-chevron-down"></i>';
+        // Escucha el evento cuando el colapso comienza a ocultarse (hide.bs.collapse)
+        historyExpanded.addEventListener('hide.bs.collapse', function () {
+            buttonIcon.classList.remove('bi-chevron-up');
+            buttonIcon.classList.add('bi-chevron-down');
+            buttonText.textContent = 'View more';
         });
     }
-
-
 });
