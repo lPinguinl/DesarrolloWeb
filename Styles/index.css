@@ -4,7 +4,12 @@ html {
 }
 
 body {
-    background: #0047AB;
+    background-image:
+        linear-gradient(rgba(10, 42, 102, 0.7), rgba(10, 42, 102, 0.7)),
+        url("../Assets/Banners/banner-desktop.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
     color: white;
     display: flex;
@@ -113,7 +118,7 @@ h2,
 
 /* ================= HERO BANNER ================= */
 .hero-banner {
-    background-image: url("../Assets/Banners/banner-desktop.webp");
+    background-image: url("../Assets/Banners/banner-diamonds.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -527,5 +532,5 @@ h2,
     .modifier-item img {
         width: 70px;
     }
-    
+
 }

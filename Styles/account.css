@@ -51,20 +51,6 @@ html {
     height: 100%;
 }
 
-body {
-    background-color: var(--blue-real);
-    /* Main Background Royal Blue */
-    color: var(--white);
-    font-family: 'Poppins', sans-serif;
-    /* Secondary Text */
-
-    /* Sticky Footer Setup */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* Ensures it takes up 100% of the viewport height */
-}
-
 /* Main content must grow to push the footer down */
 main {
     flex-grow: 1;
