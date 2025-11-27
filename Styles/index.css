@@ -327,21 +327,42 @@ flex-grow: 1;
 .modifier-item {
     background: #CCCCCC;
     border-radius: 12px;
-    text-align: center;
-    padding: 10px;
     border: 3px solid #FFD700;
+    padding: 10px;
+
+    /* Make cards consistent height and layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px; /* consistent card height */
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
 }
 
 .modifier-item img {
-    width: 50px;
+    width: 70px;
     height: auto;
     margin-bottom: 6px;
+    flex-shrink: 0;
 }
 
 .modifier-item p {
+    margin: 0;
     margin-top: 8px;
     font-weight: 600;
     color: #0A2A66;
+    font-size: 14px;
+    line-height: 1.1;
+
+    /* Clamp to two lines to avoid changing height */
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Modal for modifier details */
@@ -445,6 +466,17 @@ flex-grow: 1;
 
     .catalog-item img {
         display: none;
+    }
+
+    .modifier-item {
+        height: 130px;
+        padding: 8px;
+    }
+    .modifier-item img {
+        width: 56px;
+    }
+    .modifier-item p {
+        font-size: 13px;
     }
 }
 
