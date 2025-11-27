@@ -1,8 +1,19 @@
 /* GLOBAL STYLES */
+html {
+    height: 100%;
+}
+
 body {
     background: #0047AB;
     font-family: 'Poppins', sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin-bottom: 3rem;
 }
 
 h1,
