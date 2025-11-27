@@ -22,6 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
             options.style.width = `${rect.width}px`;
         }
 
+        // Allow clicking the container padding (outside the selected element) to open/close the dropdown
+        container.addEventListener('click', function (e) {
+            const selectedEl = container.querySelector('.dropdown-selected');
+            // If click happened outside the visible selected element (i.e., in padding), handle toggle here
+            if (selectedEl && !selectedEl.contains(e.target)) {
+                // Prevent other click handlers from also toggling
+                e.stopImmediatePropagation();
+
+                if (container.classList.contains('open')) {
+                    container.classList.remove('open');
+                    options.classList.remove('open');
+                } else {
+                    container.classList.add('open');
+                    positionOptions();
+                    options.classList.add('open');
+                }
+            }
+        });
+
         // Sync visibility when container is toggled by existing handlers
         container.addEventListener('click', () => {
             // allow other handlers to run first
