@@ -1,32 +1,52 @@
 /* GLOBAL */
 body {
-    background: #0A2A66;
+    background: #0047AB;
     font-family: 'Poppins', sans-serif;
     color: white;
 }
 
-/* HEADER (matches other pages) */
-.main-header {
-    background: #0A2A66;
-    padding: 15px 0;
+h1, h2, .title-font {
+font-family: 'Bangers', cursive;
+letter-spacing: 1.5px;
+text-shadow: 2px 2px #00000080; 
 }
 
-.logo-text {
-    font-family: 'Bangers', cursive;
-    font-size: 28px;
-    color: #FFD700;
+/* Header */
+.header {
+background: #0A2A66;
+color: white;
+padding: 10px 0;
+border-bottom: 4px solid #FFD700;
 }
 
-.featured-link {
-    text-decoration: none;
-    color: inherit;
+.account-icon {
+    width: 8vw;
+    max-width: 100px;
+    min-width: 40px;
+    height: auto;
+    border-radius: 10px;
 }
 
-.profile-icon {
-    width: 40px;
-    height: 40px;
-    background: #bbbbbb;
-    border-radius: 50%;
+/* FOOTER */
+footer {
+background-color: #0A2A66;
+}
+
+.footer-link {
+color: white;
+font-family: 'Bangers', cursive;
+text-decoration: none; 
+transition: color 0.3s;
+}
+
+.footer-link:hover {
+color: #FFD700;
+}
+.container {
+max-width: 1100px;
+margin: 40px auto;
+padding: 0 20px;
+flex-grow: 1; 
 }
 
 /* PATCH HEADER */

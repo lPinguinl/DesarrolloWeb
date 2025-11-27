@@ -62,6 +62,22 @@
             `;
             modalImage.src = image;
             modalImage.alt = name;
+        } else if (el.classList.contains('cr-card')) {
+            // Card from main page
+            const name = el.getAttribute('data-name') || el.querySelector('img')?.alt || '';
+            const winrate = el.getAttribute('data-winrate') || 'N/A';
+            const pickrate = el.getAttribute('data-pickrate') || 'N/A';
+            const image = el.getAttribute('data-image') || el.querySelector('img')?.src || '';
+
+            modalFields.innerHTML = `
+                    <div style="flex:1;">
+                        <h2 class="modal-title">${name}</h2>
+                        <p><strong>Winrate:</strong> ${winrate}</p>
+                        <p><strong>Pickrate:</strong> ${pickrate}</p>
+                    </div>
+            `;
+            modalImage.src = image;
+            modalImage.alt = name;
         }
 
         overlay.classList.add('open');
@@ -98,6 +114,21 @@
         });
         // Troop cards
         document.querySelectorAll('.unit-card').forEach(card => {
+            const link = card.closest('a');
+            if (link) {
+                link.addEventListener('click', function (evt) {
+                    evt.preventDefault();
+                    openModalFromElement(card);
+                });
+            } else {
+                card.addEventListener('click', function (evt) {
+                    openModalFromElement(card);
+                });
+            }
+        });
+
+        // Main page cards (.cr-card)
+        document.querySelectorAll('.cr-card').forEach(card => {
             const link = card.closest('a');
             if (link) {
                 link.addEventListener('click', function (evt) {

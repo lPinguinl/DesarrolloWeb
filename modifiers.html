@@ -12,7 +12,8 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <!-- Main Styles -->
     <link rel="stylesheet" href="Styles/index.css">
     <link rel="stylesheet" href="Styles/patch_notes.css">
@@ -21,10 +22,17 @@
 <body>
 
     <!-- HEADER -->
-    <header class="main-header d-flex align-items-center justify-content-between px-3">
-        <h1 class="logo-text"><a href="index.html" class="featured-link">CRMerge+</a></h1>
-        <div class="profile-icon"></div>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-4 px-lg-5">
+
+            <a href="index.html" class="navbar-brand mb-0 h1 text-warning title-font fs-1 text-decoration-none me-2">CRMerge+</a>
+
+            <a href="account.html" class="ms-2">
+                <img src="Assets/Icons/account.png" alt="Account Logo" class="account-icon">
+            </a>
+        </div>
     </header>
+    
 
     <!-- PAGE TITLE -->
     <div class="container mt-4 text-center">
@@ -42,10 +50,10 @@
 
                 <ul class="dropdown-options" id="filterOptions">
                     <li data-value="all">Show All</li>
-                    <li data-value="offense">Offensive</li>
-                    <li data-value="defense">Defensive</li>
-                    <li data-value="utility">Utility</li>
-                    <li data-value="special">Special</li>
+                    <li data-value="bronze">Bronze</li>
+                    <li data-value="silver">Silver</li>
+                    <li data-value="gold">Gold</li>
+                    <li data-value="diamond">Diamond</li>
                 </ul>
             </div>
         </div>
@@ -56,23 +64,140 @@
     <div class="container mt-4">
         <div class="row g-3">
 
-            <!-- Modifier -->
-            <div class="col-4 col-lg-2 filter-item" data-category="offense">
+
+
+            <!-- Modifiers  -->
+            <div class="col-4 col-lg-2 filter-item" data-category="diamond">
                 <a href="#" class="unit-card-link">
-                    <div class="modifier-item" data-name="Boost Attack" data-effect="Increases attack power."
-                        data-league="Gold" data-image="Assets/Icons/modifier.webp">
-                        <img src="Assets/Icons/modifier.webp" alt="modifier">
-                        <p>Boost Attack</p>
+                    <div class="modifier-item" data-name="Ascension" data-effect="Ascends unit level." data-league="Diamond" data-image="Assets/Icons/Modifiers/ascension.png">
+                        <img src="Assets/Icons/Modifiers/ascension.png" alt="Ascension">
+                        <p>Ascension</p>
                     </div>
                 </a>
             </div>
 
-            <div class="col-4 col-lg-2 filter-item" data-category="utility">
+            <div class="col-4 col-lg-2 filter-item" data-category="bronze">
                 <a href="#" class="unit-card-link">
-                    <div class="modifier-item" data-name="Range Up" data-effect="Increases unit range."
-                        data-league="Silver" data-image="Assets/Icons/modifier.webp">
-                        <img src="Assets/Icons/modifier.webp" alt="modifier">
-                        <p>Range Up</p>
+                    <div class="modifier-item" data-name="Big Bucks" data-effect="Grants bonus gold." data-league="Bronze" data-image="Assets/Icons/Modifiers/big-bucks.png">
+                        <img src="Assets/Icons/Modifiers/big-bucks.png" alt="Big Bucks">
+                        <p>Big Bucks</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="silver">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Champion" data-effect="Boosts champion units." data-league="Silver" data-image="Assets/Icons/Modifiers/champion.png">
+                        <img src="Assets/Icons/Modifiers/champion.png" alt="Champion">
+                        <p>Champion</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="gold">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Echo Bench" data-effect="Duplicates units briefly." data-league="Gold" data-image="Assets/Icons/Modifiers/echo-bench.png">
+                        <img src="Assets/Icons/Modifiers/echo-bench.png" alt="Echo Bench">
+                        <p>Echo Bench</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="bronze">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Elixir Collector" data-effect="Increases elixir generation." data-league="Bronze" data-image="Assets/Icons/Modifiers/elixir-collector.png">
+                        <img src="Assets/Icons/Modifiers/elixir-collector.png" alt="Elixir Collector">
+                        <p>Elixir Collector</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="bronze">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Elixir Festival" data-effect="Temporary elixir bonus." data-league="Bronze" data-image="Assets/Icons/Modifiers/elixir-festival.png">
+                        <img src="Assets/Icons/Modifiers/elixir-festival.png" alt="Elixir Festival">
+                        <p>Elixir Festival</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="silver">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Fighting Fever" data-effect="Increases attack speed." data-league="Silver" data-image="Assets/Icons/Modifiers/fighting-fever.png">
+                        <img src="Assets/Icons/Modifiers/fighting-fever.png" alt="Fighting Fever">
+                        <p>Fighting Fever</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="diamond">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Inferno Tower" data-effect="High single-target damage." data-league="Diamond" data-image="Assets/Icons/Modifiers/inferno-tower.png">
+                        <img src="Assets/Icons/Modifiers/inferno-tower.png" alt="Inferno Tower">
+                        <p>Inferno Tower</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="bronze">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Legacy" data-effect="Permanent upgrade." data-league="Bronze" data-image="Assets/Icons/Modifiers/legacy.png">
+                        <img src="Assets/Icons/Modifiers/legacy.png" alt="Legacy">
+                        <p>Legacy</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="gold">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Mortar" data-effect="Long-range area damage." data-league="Gold" data-image="Assets/Icons/Modifiers/mortar.png">
+                        <img src="Assets/Icons/Modifiers/mortar.png" alt="Mortar">
+                        <p>Mortar</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="gold">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Promotion" data-effect="Temporarily promotes a unit." data-league="Gold" data-image="Assets/Icons/Modifiers/promotion.png">
+                        <img src="Assets/Icons/Modifiers/promotion.png" alt="Promotion">
+                        <p>Promotion</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="silver">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Tesla" data-effect="Electrified defense boost." data-league="Silver" data-image="Assets/Icons/Modifiers/tesla.png">
+                        <img src="Assets/Icons/Modifiers/tesla.png" alt="Tesla">
+                        <p>Tesla</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="gold">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Trait Dummy" data-effect="Test trait interactions." data-league="Gold" data-image="Assets/Icons/Modifiers/trait-dummy.png">
+                        <img src="Assets/Icons/Modifiers/trait-dummy.png" alt="Trait Dummy">
+                        <p>Trait Dummy</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="silver">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="Xbow" data-effect="Continuous damage to structures." data-league="Silver" data-image="Assets/Icons/Modifiers/xbow.png">
+                        <img src="Assets/Icons/Modifiers/xbow.png" alt="Xbow">
+                        <p>Xbow</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-4 col-lg-2 filter-item" data-category="silver">
+                <a href="#" class="unit-card-link">
+                    <div class="modifier-item" data-name="You Are Mine" data-effect="Aggro control effect." data-league="Silver" data-image="Assets/Icons/Modifiers/you-are-mine.png">
+                        <img src="Assets/Icons/Modifiers/you-are-mine.png" alt="You Are Mine">
+                        <p>You Are Mine</p>
                     </div>
                 </a>
             </div>
@@ -81,26 +206,40 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="footer mt-5">
-        <div class="container d-flex justify-content-between">
-            <div class="footer-section">
-                <h4 class="footer-title">TacticsAPI</h4>
-                <p>Home</p>
-                <p>Meta</p>
-                <p>Analysis</p>
-                <p>Patch Notes</p>
+    <footer class="py-4">
+    <div class="container-fluid text-white px-4 px-lg-5">
+        <div class="row align-items-start"> 
+            <div class="col-6 col-md-6 text-start">
+                <p class="fs-4 text-warning title-font mb-2">CRMerge+</p> 
+                <ul class="list-unstyled mb-0 small">
+                    <li class="mb-1"><a href="index.html" class="footer-link d-block text-white text-decoration-none">Home</a></li>
+                    <li class="mb-1"><a href="troops.html" class="footer-link d-block text-white text-decoration-none">Cards</a></li>
+                    <li class="mb-1"><a href="patch_notes.html" class="footer-link d-block text-white text-decoration-none">Patch Notes</a></li>
+                    <li class="mb-1"><a href="contact.html" class="footer-link d-block text-white text-decoration-none">Help</a></li>
+                </ul>
             </div>
-
-            <div class="footer-section text-end">
-                <h4 class="footer-title">Social</h4>
-                <div class="social-icons">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+            
+            <div class="col-6 col-md-6 text-end">
+                <p class="fs-4 text-warning title-font mb-2">Social</p>
+                <div class="d-flex justify-content-end social-icons">
+                    <a href="https://twitter.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-youtube"></i></a> 
                 </div>
             </div>
         </div>
-    </footer>
+        
+        <div class="row">
+            <div class="col-12">
+                <hr class="border-top border-secondary my-4"> 
+            </div>
+            <div class="col-12 text-center">
+                <small class="text-secondary">© 2025 CRMerge+</small> 
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="Scripts/filters.js"></script>
     <script src="Scripts/modals.js"></script>

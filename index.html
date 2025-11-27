@@ -12,7 +12,8 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <!-- External CSS -->
     <link rel="stylesheet" href="Styles/index.css">
 </head>
@@ -20,9 +21,15 @@
 <body>
 
     <!-- HEADER -->
-    <header class="main-header d-flex align-items-center justify-content-between px-3">
-        <h1 class="logo-text"><a href="index.html" class="featured-link">CRMerge+</a></h1>
-        <div class="profile-icon"></div>
+    <header class="header">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-4 px-lg-5">
+
+            <a href="index.html" class="navbar-brand mb-0 h1 text-warning title-font fs-1 text-decoration-none me-2">CRMerge+</a>
+
+            <a href="account.html" class="ms-2">
+                <img src="Assets/Icons/account.png" alt="Account Logo" class="account-icon">
+            </a>
+        </div>
     </header>
 
     <!-- HERO BANNER -->
@@ -59,19 +66,19 @@
 
             <div class="row g-2 mt-2">
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Archer Queen" data-winrate="55.2%" data-pickrate="9.4%">
                         <img src="Assets/Cards/archer-queen.jpg" class="card-img-top" alt="Archer Queen">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Goblins" data-winrate="53.1%" data-pickrate="7.6%">
                         <img src="Assets/Cards/goblins.jpg" class="card-img-top" alt="Goblins">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Skeleton King" data-winrate="54.0%" data-pickrate="6.1%">
                         <img src="Assets/Cards/skeleton-king.jpg" class="card-img-top" alt="Skeleton King">
                     </div>
                 </div>
@@ -87,37 +94,37 @@
             <div class="row g-2 mt-2">
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Bomber" data-winrate="48.7%" data-pickrate="5.2%">
                         <img src="Assets/Cards/bomber.jpg" class="card-img-top" alt="Bomber">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Executioner" data-winrate="49.3%" data-pickrate="6.0%">
                         <img src="Assets/Cards/executioner.jpg" class="card-img-top" alt="Executioner">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Knight" data-winrate="50.1%" data-pickrate="7.0%">
                         <img src="Assets/Cards/knight.jpg" class="card-img-top" alt="Knight">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Archer" data-winrate="47.8%" data-pickrate="8.8%">
                         <img src="Assets/Cards/archer.jpg" class="card-img-top" alt="Archer">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Valkyrie" data-winrate="46.2%" data-pickrate="4.5%">
                         <img src="Assets/Cards/valkyrie.jpg" class="card-img-top" alt="Valkyrie">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Bandit" data-winrate="49.0%" data-pickrate="5.9%">
                         <img src="Assets/Cards/bandit.jpg" class="card-img-top" alt="Bandit">
                     </div>
                 </div>
@@ -131,25 +138,25 @@
 
             <div class="row g-2 mt-2">
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Prince" data-winrate="43.5%" data-pickrate="3.3%">
                         <img src="Assets/Cards/prince.jpg" class="card-img-top" alt="Prince">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Mega Knight" data-winrate="42.0%" data-pickrate="2.9%">
                         <img src="Assets/Cards/mega-knight.jpg" class="card-img-top" alt="Mega Knight">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Princess" data-winrate="44.7%" data-pickrate="3.8%">
                         <img src="Assets/Cards/princess.jpg" class="card-img-top" alt="Princess">
                     </div>
                 </div>
 
                 <div class="col-auto">
-                    <div class="cr-card card">
+                    <div class="cr-card card" data-name="Barbarian" data-winrate="40.5%" data-pickrate="6.5%">
                         <img src="Assets/Cards/barbarian.jpg" class="card-img-top" alt="Barbarian">
                     </div>
                 </div>
@@ -235,28 +242,43 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer mt-5">
-        <div class="container d-flex justify-content-between">
-
-            <div class="footer-section">
-                <h4 class="footer-title">CRMerge+</h4>
-                <p>Home</p>
-                <p>Meta</p>
-                <p>Analysis</p>
-                <p>Patch Notes</p>
+    <footer class="py-4">
+    <div class="container-fluid text-white px-4 px-lg-5">
+        <div class="row align-items-start"> 
+            <div class="col-6 col-md-6 text-start">
+                <p class="fs-4 text-warning title-font mb-2">CRMerge+</p> 
+                <ul class="list-unstyled mb-0 small">
+                    <li class="mb-1"><a href="index.html" class="footer-link d-block text-white text-decoration-none">Home</a></li>
+                    <li class="mb-1"><a href="troops.html" class="footer-link d-block text-white text-decoration-none">Cards</a></li>
+                    <li class="mb-1"><a href="patch_notes.html" class="footer-link d-block text-white text-decoration-none">Patch Notes</a></li>
+                    <li class="mb-1"><a href="contact.html" class="footer-link d-block text-white text-decoration-none">Help</a></li>
+                </ul>
             </div>
-
-            <div class="footer-section text-end">
-                <h4 class="footer-title">Social</h4>
-                <div class="social-icons">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+            
+            <div class="col-6 col-md-6 text-end">
+                <p class="fs-4 text-warning title-font mb-2">Social</p>
+                <div class="d-flex justify-content-end social-icons">
+                    <a href="https://twitter.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-youtube"></i></a> 
                 </div>
             </div>
-
         </div>
-    </footer>
+        
+        <div class="row">
+            <div class="col-12">
+                <hr class="border-top border-secondary my-4"> 
+            </div>
+            <div class="col-12 text-center">
+                <small class="text-secondary">© 2025 CRMerge+</small> 
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Load modal script -->
+<script src="Scripts/modals.js"></script>
 
 </body>
 

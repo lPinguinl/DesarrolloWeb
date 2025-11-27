@@ -8,6 +8,37 @@
 --white: #FFFFFF; 
 }
 
+/* NUEVO ESTILO: Fondo Oscuro para la tarjeta principal de perfil */
+.summary-dark-card {
+    background: var(--blue-dark); /* Fondo: Azul Oscuro */
+    border-radius: 12px;
+    border: 2px solid var(--gold); /* Borde: Dorado */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* El h3 (Battle Summary) dentro de esta tarjeta debería ser Dorado para resaltar */
+.summary-dark-card h3 {
+    color: var(--gold) !important; 
+}
+
+/* Ajustes adicionales para texto dentro de la tarjeta oscura */
+.summary-dark-card .text-white {
+    color: var(--white) !important;
+}
+
+/* Las estadísticas de Wins y Losses mantienen sus colores originales, que ya son de buen contraste: */
+.status-win { /* Wins */
+    color: #4CAF50 !important; /* O el verde que estés usando */
+}
+.status-loss { /* Losses */
+    color: var(--royal-red) !important; /* Rojo Royale */
+}
+
+/* (Opcional) Si quieres que la imagen de perfil también tenga el borde en blanco o dorado */
+.summary-dark-card img {
+    border: 2px solid var(--white) !important; 
+}
+
 /* 1. STICKY FOOTER IMPLEMENTATION */
 html {
 height: 100%;
@@ -93,6 +124,7 @@ color: var(--blue-dark);
 /* Uso: Fondo secundario / Footer -> AZUL OSCURO (#0A2466) */
 footer {
 background-color: var(--blue-dark); /* Aplicar la variable Dark Blue */
+font-family: 'Bangers', cursive; /* Títulos: Bangers */
 }
 
 /* Estilo para los enlaces del footer */

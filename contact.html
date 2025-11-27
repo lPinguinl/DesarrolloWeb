@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | CRMerge+</title>
-    <link rel="stylesheet" href="contact.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | CRMerge+</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Contact Us</h1>
-        <p>We’re here to help you with anything you need.</p>
-    </header>
+<header class="header">
+    <div class="container-fluid d-flex justify-content-between align-items-center px-4 px-lg-5">
+        
+        <a href="index.html" class="navbar-brand mb-0 h1 text-warning title-font fs-1 text-decoration-none me-2">CRMerge+</a>
+        
+        <a href="account.html" class="ms-2">
+            <img src="Assets/Icons/account.png" alt="Account Logo" class="account-icon">
+        </a>
+    </div>
+</header>
 
-    <main class="container">
+<div class="text-center py-4"> 
+    <h1 class="title-font text-white mb-0 fs-1">Contact Us</h1> 
+    <p class="mt-0 mb-0">We are here to help you with anything you need.</p>
+</div>
+
+
+<div class="container">
+    <main class="contact-layout"> 
+        
         <section class="contact-card">
-            <h2>Send a Message</h2>
-
+            <h2 class="title-font">Send a Message</h2> 
+            
             <form id="contactForm" novalidate>
                 <div class="input-group">
                     <label for="name">Full Name</label>
@@ -41,17 +64,50 @@
         </section>
 
         <section class="info-card">
-            <h2>Support Information</h2>
-            <p><strong>Email:</strong> support@CRMerge.com</p>
-            <p><strong>Phone:</strong> +54 11 65137606</p>
-            <p><strong>Hours:</strong> Mon–Fri / 8AM–8PM</p>
+            <h2 class="title-font">Support Information</h2> 
+            <p><strong>Email:</strong> support@CRMergeplus.com</p>
+            <p><strong>Phone:</strong> +54 11 123344332</p>
+            <p><strong>Hours:</strong> Monday to Friday / From 8AM to 8PM</p>
         </section>
     </main>
+</div>
 
-    <footer class="footer">
-        <p>© 2025 CRMerge+. All rights reserved.</p>
-    </footer>
+<footer class="py-4">
+    <div class="container-fluid text-white px-4 px-lg-5">
+        <div class="row align-items-start"> 
+            <div class="col-6 col-md-6 text-start">
+                <p class="fs-4 text-warning title-font mb-2">CRMerge+</p> 
+                <ul class="list-unstyled mb-0 small">
+                    <li class="mb-1"><a href="index.html" class="footer-link d-block text-white text-decoration-none">Home</a></li>
+                    <li class="mb-1"><a href="troops.html" class="footer-link d-block text-white text-decoration-none">Cards</a></li>
+                    <li class="mb-1"><a href="patch_notes.html" class="footer-link d-block text-white text-decoration-none">Patch Notes</a></li>
+                    <li class="mb-1"><a href="contact.html" class="footer-link d-block text-white text-decoration-none">Help</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-6 col-md-6 text-end">
+                <p class="fs-4 text-warning title-font mb-2">Social</p>
+                <div class="d-flex justify-content-end social-icons">
+                    <a href="https://twitter.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" class="text-warning mx-1 fs-3"><i class="bi bi-youtube"></i></a> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <hr class="border-top border-secondary my-4"> 
+            </div>
+            <div class="col-12 text-center">
+                <small class="text-secondary">© 2025 CRMerge+</small> 
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <script src="contact.js"></script>
+<script src="Scripts/contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
