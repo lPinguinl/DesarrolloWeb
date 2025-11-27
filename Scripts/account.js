@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (historyExpanded && buttonIcon && buttonText) {
         
-        // Escucha el evento cuando el colapso comienza a mostrarse (show.bs.collapse)
-        historyExpanded.addEventListener('show.bs.collapse', function () {
-            buttonIcon.classList.remove('bi-chevron-down');
-            buttonIcon.classList.add('bi-chevron-up');
-            buttonText.textContent = 'View less';
-        });
 
         // Escucha el evento cuando el colapso comienza a ocultarse (hide.bs.collapse)
         historyExpanded.addEventListener('hide.bs.collapse', function () {
